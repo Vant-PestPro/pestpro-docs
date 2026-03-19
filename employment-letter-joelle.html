@@ -141,10 +141,16 @@
     @media print {
       body { background: white; padding: 0; }
       .page { box-shadow: none; padding: 2rem 2.5rem; }
+      button { display: none !important; }
     }
   </style>
 </head>
 <body>
+  <!-- PRINT BUTTON -->
+  <div style="max-width:750px;margin:0 auto 1rem;text-align:right;">
+    <button onclick="printLetter()" style="background:#1a2557;color:white;border:none;padding:0.7rem 1.8rem;font-family:'Arial',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:3px;">⬇ Save as PDF / Print</button>
+  </div>
+
   <div class="page">
 
     <!-- LETTERHEAD -->
@@ -212,5 +218,10 @@
     </div>
 
   </div>
+  <script>
+    function printLetter() {
+      window.print();
+    }
+  </script>
 </body>
 </html>

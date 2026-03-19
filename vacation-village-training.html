@@ -9,10 +9,23 @@
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Inter',sans-serif;background:#f0f0f0;padding:1.5rem;}
     @media print{
-      body{background:white;padding:0;}
+      body{background:white;padding:0;margin:0;}
       .no-print{display:none!important;}
-      .page{box-shadow:none!important;margin:0!important;page-break-after:always;}
+      .page{
+        box-shadow:none!important;
+        margin:0!important;
+        padding:0!important;
+        page-break-after:always;
+        width:8.5in;
+      }
       .page:last-child{page-break-after:auto;}
+      .header{padding:0.6in 0.6in 0.3in;}
+      .doc-title{padding:0.2in 0.6in;}
+      .intro-bar{padding:0.15in 0.6in;}
+      .content{padding:0.2in 0.6in 0.3in;}
+      .footer{padding:0.15in 0.6in;}
+      .section{page-break-inside:avoid;}
+      .closing-box{page-break-inside:avoid;}
     }
 
     .print-bar{max-width:800px;margin:0 auto 1rem;text-align:right;}

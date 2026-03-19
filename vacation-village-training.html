@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pest Awareness Training — Vacation Village @ Parkway | Pest Pro LLC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:#f0f0f0;padding:1.5rem;}
+    @media print{body{background:white;padding:0;} .no-print{display:none!important;} .page{box-shadow:none!important;margin:0!important;}}
+
+    /* PRINT BUTTON */
+    .print-bar{max-width:800px;margin:0 auto 1rem;text-align:right;}
+    .print-btn{background:#1a2557;color:white;border:none;padding:0.65rem 1.6rem;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:3px;}
+
+    /* PAGE */
+    .page{background:white;max-width:800px;margin:0 auto;box-shadow:0 4px 20px rgba(0,0,0,0.12);}
+
+    /* HEADER */
+    .header{padding:2rem 2.5rem 1.5rem;border-bottom:3px solid #1a2557;}
+    .header-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;}
+    .logo{height:60px;width:auto;}
+    .header-right{text-align:right;font-size:0.72rem;color:#555;line-height:1.7;}
+    .header-right strong{color:#1a2557;font-size:0.78rem;display:block;}
+    .gold-bar{height:3px;background:linear-gradient(90deg,#FFB800,#e0a200,#FFB800);margin-top:1.2rem;}
+    .doc-title{padding:1.2rem 2.5rem;background:#1a2557;color:white;}
+    .doc-title h1{font-size:1.1rem;font-weight:700;letter-spacing:0.04em;}
+    .doc-title .sub{font-size:0.78rem;opacity:0.75;margin-top:0.2rem;letter-spacing:0.05em;}
+
+    /* INTRO BAR */
+    .intro-bar{background:#fffbf0;border-bottom:1px solid #FFB800;padding:0.8rem 2.5rem;display:flex;gap:3rem;flex-wrap:wrap;}
+    .intro-item{font-size:0.75rem;color:#333;}
+    .intro-item strong{color:#1a2557;display:block;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.1rem;}
+
+    /* CONTENT */
+    .content{padding:1.5rem 2.5rem 2rem;}
+
+    /* OBJECTIVE BOX */
+    .objective{background:#f0f3fa;border-left:4px solid #1a2557;padding:0.8rem 1.2rem;margin-bottom:1.5rem;font-size:0.82rem;color:#1a2557;font-weight:600;line-height:1.6;}
+
+    /* SECTION */
+    .section{margin-bottom:1.2rem;border:1px solid #e5e7eb;border-radius:3px;overflow:hidden;}
+    .section-header{display:flex;align-items:stretch;}
+    .time-badge{background:#1a2557;color:white;padding:0.6rem 0.8rem;font-size:0.7rem;font-weight:700;letter-spacing:0.05em;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.3;}
+    .section-title-wrap{background:#f8f9fc;padding:0.6rem 1rem;flex:1;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.4rem;}
+    .section-title-wrap h2{font-size:0.88rem;font-weight:700;color:#1a2557;}
+    .core-msg{font-size:0.75rem;color:#cc6600;font-style:italic;font-weight:500;}
+    .section-body{padding:0.8rem 1rem;background:white;}
+    .section-body ul{padding-left:1.2rem;display:flex;flex-direction:column;gap:0.3rem;}
+    .section-body li{font-size:0.8rem;color:#333;line-height:1.5;}
+    .section-body li strong{color:#1a2557;}
+
+    /* TIERS */
+    .tiers{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.6rem;margin-top:0.5rem;}
+    .tier{background:#f8f9fc;border:1px solid #e5e7eb;border-radius:2px;padding:0.6rem 0.8rem;}
+    .tier-label{font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:#FFB800;margin-bottom:0.4rem;}
+    .tier ul{padding-left:1rem;}
+    .tier li{font-size:0.74rem;color:#333;line-height:1.5;}
+
+    /* DEPLOY ALERTS */
+    .deploy-alert{background:#fffbf0;border:1px solid #FFB800;border-radius:2px;padding:0.4rem 0.8rem;font-size:0.75rem;font-weight:700;color:#996600;margin:0.5rem 0;display:flex;align-items:center;gap:0.4rem;}
+
+    /* STEPS */
+    .steps{display:flex;flex-direction:column;gap:0.3rem;margin-top:0.3rem;}
+    .step-row{display:flex;align-items:flex-start;gap:0.6rem;}
+    .step-num{width:20px;height:20px;background:#1a2557;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:800;flex-shrink:0;margin-top:1px;}
+    .step-text{font-size:0.8rem;color:#333;line-height:1.5;}
+    .step-text strong{color:#cc2200;}
+
+    /* PEST TABLE */
+    table{width:100%;border-collapse:collapse;margin-top:0.4rem;font-size:0.78rem;}
+    th{background:#1a2557;color:white;padding:0.4rem 0.7rem;text-align:left;font-weight:600;font-size:0.72rem;letter-spacing:0.05em;}
+    td{padding:0.4rem 0.7rem;border-bottom:1px solid #e5e7eb;color:#333;line-height:1.5;}
+    tr:last-child td{border-bottom:none;}
+    .code-badge{display:inline-block;background:#1a2557;color:white;border-radius:2px;padding:0.1rem 0.4rem;font-weight:800;font-size:0.7rem;letter-spacing:0.05em;}
+
+    /* CLOSING */
+    .closing-box{background:#1a2557;color:white;padding:1rem 1.2rem;border-radius:2px;margin-top:0.5rem;text-align:center;}
+    .closing-box p{font-size:0.85rem;font-style:italic;line-height:1.7;font-weight:300;}
+    .closing-box p strong{font-weight:700;color:#FFB800;font-style:normal;}
+
+    /* WARNINGS & TRANSLATOR */
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem;}
+    .warn-box{background:#fff5f5;border:1px solid #fca5a5;border-left:4px solid #cc2200;border-radius:2px;padding:0.8rem 1rem;}
+    .warn-box h3{font-size:0.75rem;font-weight:800;color:#cc2200;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;}
+    .warn-box ul{padding-left:1rem;}
+    .warn-box li{font-size:0.76rem;color:#333;line-height:1.6;}
+    .trans-box{background:#f0f3fa;border:1px solid #1a2557;border-radius:2px;padding:0.8rem 1rem;}
+    .trans-box h3{font-size:0.75rem;font-weight:800;color:#1a2557;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;}
+    .trans-box ul{padding-left:1rem;}
+    .trans-box li{font-size:0.76rem;color:#333;line-height:1.6;}
+    .trans-box li em{color:#1a2557;font-style:italic;}
+
+    /* FOOTER */
+    .footer{border-top:3px solid #1a2557;padding:0.8rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;}
+    .footer-logo{height:28px;width:auto;opacity:0.8;}
+    .footer-text{font-size:0.65rem;color:#888;text-align:right;line-height:1.6;}
+
+    @media(max-width:600px){
+      .tiers{grid-template-columns:1fr;}
+      .two-col{grid-template-columns:1fr;}
+      .header-top{flex-direction:column;}
+      .header-right{text-align:left;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="print-bar no-print">
+  <button class="print-btn" onclick="window.print()">⬇ Save as PDF / Print</button>
+</div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-top">
+      <img src="../pestpro-website/assets/logos/logo-official.jpg" alt="Pest Pro LLC" class="logo"/>
+      <div class="header-right">
+        <strong>Prepared for:</strong>
+        Vacation Village @ Parkway<br/>
+        Managed by Vacatia Resorts<br/>
+        Back-of-House Staff Training<br/>
+        Housekeeping &amp; Maintenance
+      </div>
+    </div>
+    <div class="gold-bar"></div>
+  </div>
+
+  <div class="doc-title">
+    <h1>PEST AWARENESS TRAINING — DELIVERY RUNSHEET</h1>
+    <div class="sub">CONFIDENTIAL · FOR TRAINER USE ONLY · 20-MINUTE BILINGUAL DELIVERY</div>
+  </div>
+
+  <!-- INTRO BAR -->
+  <div class="intro-bar">
+    <div class="intro-item"><strong>Duration</strong>20 Minutes</div>
+    <div class="intro-item"><strong>Delivery</strong>Bilingual (English / Spanish)</div>
+    <div class="intro-item"><strong>Audience</strong>Housekeeping + Maintenance (BOH)</div>
+    <div class="intro-item"><strong>Prepared by</strong>Pest Pro, LLC</div>
+    <div class="intro-item"><strong>Contact</strong>(407) 922-2276</div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- OBJECTIVE -->
+    <div class="objective">
+      🎯 <strong>Objective:</strong> By the end of this training, staff will know exactly where to look, stop immediately on suspicion, prevent contamination spread, report clearly, and understand their role in protecting the property.
+    </div>
+
+    <!-- PRE-TRAINING CHECKLIST -->
+    <div class="section">
+      <div class="section-header">
+        <div class="time-badge">BEFORE<br/>YOU<br/>START</div>
+        <div class="section-title-wrap">
+          <h2>Pre-Training Setup Checklist</h2>
+        </div>
+      </div>
+      <div class="section-body">
+        <ul>
+          <li>☐ &nbsp;Live samples staged — <strong>NOT visible to audience yet</strong></li>
+          <li>☐ &nbsp;Laminated photos ready but set aside</li>
+          <li>☐ &nbsp;Translator briefed: one sentence at a time, full pause, no overlap</li>
+          <li>☐ &nbsp;Room secured — no interruptions for 20 minutes</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 0:00–2:00 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="time-badge">0:00<br/>—<br/>2:00</div>
+        <div class="section-title-wrap">
+          <h2>Opening &amp; Prevention</h2>
+          <div class="core-msg">"Bedbugs spread through movement of items — not by themselves."</div>
+        </div>
+      </div>
+      <div class="section-body">
+        <ul>
+          <li>Visual scan <strong>before</strong> stripping beds — every time, every room</li>
+          <li>Keep linens contained at all times</li>
+          <li>Never place linens or carts on beds</li>
+          <li>No cross-contact between rooms</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2:00–8:00 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="time-badge">2:00<br/>—<br/>8:00</div>
+        <div class="section-title-wrap">
+          <h2>Code I — How to Inspect Beds</h2>
+          <div class="core-msg">"Focus on the head of the bed. That is where they are most often found."</div>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="deploy-alert">🔍 Deploy laminated photos now. Pass in controlled order. No interruptions.</div>
+        <div class="tiers">
+          <div class="tier">
+            <div class="tier-label">Tier 1 — Every Time</div>
+            <ul>
+              <li>Mattress seams &amp; piping</li>
+              <li>Top corners of bed skirt</li>
+              <li>Box spring underside</li>
+              <li>Headboard — front, back &amp; mount points</li>
+              <li>Fabric folds &amp; crevices</li>
+            </ul>
+          </div>
+          <div class="tier">
+            <div class="tier-label">Tier 2 — Within 6–8 Ft</div>
+            <ul>
+              <li>Bed frame joints</li>
+              <li>Nightstands</li>
+              <li>Lamps &amp; alarm clocks</li>
+              <li>Wall outlets</li>
+              <li>Baseboards / carpet edge</li>
+            </ul>
+          </div>
+          <div class="tier">
+            <div class="tier-label">Tier 3 — Occasional</div>
+            <ul>
+              <li>Curtains (pleats &amp; seams)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="deploy-alert" style="margin-top:0.6rem;">🧪 Deploy live samples now. Control passing — do not interrupt training flow.</div>
+      </div>
+    </div>
+
+    <!-- 8:00–10:00 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="time-badge">8:00<br/>—<br/>10:00</div>
+        <div class="section-title-wrap">
+          <h2>Suspected Code I — What To Do</h2>
+          <div class="core-msg">"Do not finish the room."</div>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="steps">
+          <div class="step-row"><div class="step-num">1</div><div class="step-text"><strong>Stop work immediately</strong></div></div>
+          <div class="step-row"><div class="step-num">2</div><div class="step-text">Do <strong>NOT</strong> continue cleaning</div></div>
+          <div class="step-row"><div class="step-num">3</div><div class="step-text">Do <strong>NOT</strong> move items unnecessarily</div></div>
+          <div class="step-row"><div class="step-num">4</div><div class="step-text">Exit the room</div></div>
+          <div class="step-row"><div class="step-num">5</div><div class="step-text">Secure / close the room</div></div>
+          <div class="step-row"><div class="step-num">6</div><div class="step-text"><strong>Report immediately</strong></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10:00–12:00 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="time-badge">10:00<br/>—<br/>12:00</div>
+        <div class="section-title-wrap">
+          <h2>Linen Handling — Contamination Control</h2>
+          <div class="core-msg">"Sheet → cart → next room = spread."</div>
+        </div>
+      </div>
+      <div class="section-body">
+        <ul>
+          <li>Bag linens <strong>inside the room</strong></li>
+          <li>Seal bag <strong>before</strong> removal</li>
+          <li>Do <strong>NOT</strong> transport loose linens under any circumstances</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 12:00–13:30 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="time-badge">12:00<br/>—<br/>13:30</div>
+        <div class="section-title-wrap">
+          <h2>Post-Treatment Cleaning</h2>
+          <div class="core-msg">"Do not re-enter until cleared."</div>
+        </div>
+      </div>
+      <div class="section-body">
+        <ul>
+          <li>Only after <strong>management approval</strong>: replace linens · wipe surfaces · vacuum if required</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 13:30–17:30 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="time-badge">13:30<br/>—<br/>17:30</div>
+        <div class="section-title-wrap">
+          <h2>Other Pests — Facility Responsibility</h2>
+        </div>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead><tr><th>Code</th><th>Pest</th><th>Key Actions</th></tr></thead>
+          <tbody>
+            <tr><td><span class="code-badge">R</span></td><td>Roaches</td><td>Clean behind refrigerators, under stoves, eliminate food debris</td></tr>
+            <tr><td><span class="code-badge">A</span></td><td>Ants</td><td>Clean spills immediately, remove moisture, report trails early</td></tr>
+            <tr><td><span class="code-badge">W</span></td><td>Wasps</td><td>Inspect patios, railings, overhangs — <strong>do NOT disturb nests</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 17:30–18:30 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="time-badge">17:30<br/>—<br/>18:30</div>
+        <div class="section-title-wrap">
+          <h2>Unknown Pest Protocol</h2>
+        </div>
+      </div>
+      <div class="section-body">
+        <ul>
+          <li><strong>Do not guess</strong></li>
+          <li><strong>Do not ignore</strong></li>
+          <li><strong>Report immediately</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 18:30–20:00 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="time-badge">18:30<br/>—<br/>20:00</div>
+        <div class="section-title-wrap">
+          <h2>Reporting Standard</h2>
+          <div class="core-msg">"Clear reporting prevents delays and prevents spread."</div>
+        </div>
+      </div>
+      <div class="section-body">
+        <ul>
+          <li><strong>Room number</strong></li>
+          <li><strong>Exact location</strong> — bed, kitchen, patio, etc.</li>
+          <li><strong>What was observed:</strong> live insects · staining · nesting</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CLOSING LINE -->
+    <div class="closing-box">
+      <p><strong>CLOSING LINE — DELIVER THIS EXACTLY:</strong></p>
+      <p>"Early detection keeps it in one room.<br/>Improper handling spreads it across the property."</p>
+    </div>
+
+    <!-- WARNINGS + TRANSLATOR -->
+    <div class="two-col">
+      <div class="warn-box">
+        <h3>⚠ Failure Points — Watch For These</h3>
+        <ul>
+          <li>Staff continuing to clean after suspicion</li>
+          <li>Linens moved without bagging first</li>
+          <li>Headboards &amp; bed skirt tops skipped</li>
+          <li>Vague or incomplete reporting</li>
+        </ul>
+      </div>
+      <div class="trans-box">
+        <h3>Translator Rules — Non-Negotiable</h3>
+        <ul>
+          <li>One sentence → full stop → translate → continue</li>
+          <li>No overlapping speech</li>
+          <li><em>"Stop work immediately"</em></li>
+          <li><em>"Do not move contaminated items"</em></li>
+          <li><em>"Bag linens inside the room"</em></li>
+          <li><em>"Report immediately"</em></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <img src="../pestpro-website/assets/logos/logo-official.jpg" alt="Pest Pro LLC" class="footer-logo"/>
+    <div class="footer-text">
+      Pest Pro, LLC · (407) 922-2276 · info@PestProLLC.com<br/>
+      Prepared exclusively for Vacation Village @ Parkway / Vacatia Resorts · Confidential
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

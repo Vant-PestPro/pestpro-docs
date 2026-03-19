@@ -8,16 +8,18 @@
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Inter',sans-serif;background:#f0f0f0;padding:1.5rem;}
-    @media print{body{background:white;padding:0;} .no-print{display:none!important;} .page{box-shadow:none!important;margin:0!important;}}
+    @media print{
+      body{background:white;padding:0;}
+      .no-print{display:none!important;}
+      .page{box-shadow:none!important;margin:0!important;page-break-after:always;}
+      .page:last-child{page-break-after:auto;}
+    }
 
-    /* PRINT BUTTON */
     .print-bar{max-width:800px;margin:0 auto 1rem;text-align:right;}
     .print-btn{background:#1a2557;color:white;border:none;padding:0.65rem 1.6rem;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:3px;}
 
-    /* PAGE */
-    .page{background:white;max-width:800px;margin:0 auto;box-shadow:0 4px 20px rgba(0,0,0,0.12);}
+    .page{background:white;max-width:800px;margin:0 auto 2rem;box-shadow:0 4px 20px rgba(0,0,0,0.12);}
 
-    /* HEADER */
     .header{padding:2rem 2.5rem 1.5rem;border-bottom:3px solid #1a2557;}
     .header-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;}
     .logo{height:60px;width:auto;}
@@ -28,18 +30,14 @@
     .doc-title h1{font-size:1.1rem;font-weight:700;letter-spacing:0.04em;}
     .doc-title .sub{font-size:0.78rem;opacity:0.75;margin-top:0.2rem;letter-spacing:0.05em;}
 
-    /* INTRO BAR */
     .intro-bar{background:#fffbf0;border-bottom:1px solid #FFB800;padding:0.8rem 2.5rem;display:flex;gap:3rem;flex-wrap:wrap;}
     .intro-item{font-size:0.75rem;color:#333;}
     .intro-item strong{color:#1a2557;display:block;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.1rem;}
 
-    /* CONTENT */
     .content{padding:1.5rem 2.5rem 2rem;}
 
-    /* OBJECTIVE BOX */
     .objective{background:#f0f3fa;border-left:4px solid #1a2557;padding:0.8rem 1.2rem;margin-bottom:1.5rem;font-size:0.82rem;color:#1a2557;font-weight:600;line-height:1.6;}
 
-    /* SECTION */
     .section{margin-bottom:1.2rem;border:1px solid #e5e7eb;border-radius:3px;overflow:hidden;}
     .section-header{display:flex;align-items:stretch;}
     .time-badge{background:#1a2557;color:white;padding:0.6rem 0.8rem;font-size:0.7rem;font-weight:700;letter-spacing:0.05em;min-width:90px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.3;}
@@ -51,57 +49,62 @@
     .section-body li{font-size:0.8rem;color:#333;line-height:1.5;}
     .section-body li strong{color:#1a2557;}
 
-    /* TIERS */
-    .tiers{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.6rem;margin-top:0.5rem;}
-    .tier{background:#f8f9fc;border:1px solid #e5e7eb;border-radius:2px;padding:0.6rem 0.8rem;}
-    .tier-label{font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:#FFB800;margin-bottom:0.4rem;}
-    .tier ul{padding-left:1rem;}
-    .tier li{font-size:0.74rem;color:#333;line-height:1.5;}
+    .inspection-list{display:flex;flex-direction:column;gap:0.3rem;}
+    .inspect-item{display:flex;align-items:flex-start;gap:0.6rem;font-size:0.8rem;color:#333;line-height:1.5;}
+    .inspect-dot{width:8px;height:8px;background:#FFB800;border-radius:50%;flex-shrink:0;margin-top:4px;}
 
-    /* DEPLOY ALERTS */
     .deploy-alert{background:#fffbf0;border:1px solid #FFB800;border-radius:2px;padding:0.4rem 0.8rem;font-size:0.75rem;font-weight:700;color:#996600;margin:0.5rem 0;display:flex;align-items:center;gap:0.4rem;}
+    .sealed-alert{background:#fff5f5;border:1px solid #fca5a5;border-radius:2px;padding:0.4rem 0.8rem;font-size:0.75rem;font-weight:700;color:#cc2200;margin:0.5rem 0;display:flex;align-items:center;gap:0.4rem;}
 
-    /* STEPS */
     .steps{display:flex;flex-direction:column;gap:0.3rem;margin-top:0.3rem;}
     .step-row{display:flex;align-items:flex-start;gap:0.6rem;}
     .step-num{width:20px;height:20px;background:#1a2557;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:800;flex-shrink:0;margin-top:1px;}
     .step-text{font-size:0.8rem;color:#333;line-height:1.5;}
     .step-text strong{color:#cc2200;}
 
-    /* PEST TABLE */
     table{width:100%;border-collapse:collapse;margin-top:0.4rem;font-size:0.78rem;}
     th{background:#1a2557;color:white;padding:0.4rem 0.7rem;text-align:left;font-weight:600;font-size:0.72rem;letter-spacing:0.05em;}
     td{padding:0.4rem 0.7rem;border-bottom:1px solid #e5e7eb;color:#333;line-height:1.5;}
     tr:last-child td{border-bottom:none;}
     .code-badge{display:inline-block;background:#1a2557;color:white;border-radius:2px;padding:0.1rem 0.4rem;font-weight:800;font-size:0.7rem;letter-spacing:0.05em;}
 
-    /* CLOSING */
     .closing-box{background:#1a2557;color:white;padding:1rem 1.2rem;border-radius:2px;margin-top:0.5rem;text-align:center;}
     .closing-box p{font-size:0.85rem;font-style:italic;line-height:1.7;font-weight:300;}
     .closing-box p strong{font-weight:700;color:#FFB800;font-style:normal;}
 
-    /* WARNINGS & TRANSLATOR */
-    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem;}
-    .warn-box{background:#fff5f5;border:1px solid #fca5a5;border-left:4px solid #cc2200;border-radius:2px;padding:0.8rem 1rem;}
-    .warn-box h3{font-size:0.75rem;font-weight:800;color:#cc2200;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;}
-    .warn-box ul{padding-left:1rem;}
-    .warn-box li{font-size:0.76rem;color:#333;line-height:1.6;}
-    .trans-box{background:#f0f3fa;border:1px solid #1a2557;border-radius:2px;padding:0.8rem 1rem;}
-    .trans-box h3{font-size:0.75rem;font-weight:800;color:#1a2557;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;}
-    .trans-box ul{padding-left:1rem;}
-    .trans-box li{font-size:0.76rem;color:#333;line-height:1.6;}
-    .trans-box li em{color:#1a2557;font-style:italic;}
+    .reporting-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.8rem;margin-top:0.5rem;}
+    .report-item{background:#f8f9fc;border:1px solid #e5e7eb;border-radius:2px;padding:0.7rem;text-align:center;}
+    .report-item .icon{font-size:1.2rem;margin-bottom:0.3rem;}
+    .report-item p{font-size:0.75rem;font-weight:600;color:#1a2557;}
 
-    /* FOOTER */
     .footer{border-top:3px solid #1a2557;padding:0.8rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;}
     .footer-logo{height:28px;width:auto;opacity:0.8;}
     .footer-text{font-size:0.65rem;color:#888;text-align:right;line-height:1.6;}
 
+    /* SPANISH PAGE */
+    .page.spanish .doc-title{background:#2d6a1f;}
+    .page.spanish .time-badge{background:#2d6a1f;}
+    .page.spanish .header{border-bottom:3px solid #2d6a1f;}
+    .page.spanish .footer{border-top:3px solid #2d6a1f;}
+    .page.spanish .objective{border-left:4px solid #2d6a1f;color:#2d6a1f;}
+    .page.spanish .section-title-wrap h2{color:#2d6a1f;}
+    .page.spanish .inspect-dot{background:#4a9e35;}
+    .page.spanish table th{background:#2d6a1f;}
+    .page.spanish .code-badge{background:#2d6a1f;}
+    .page.spanish .closing-box{background:#2d6a1f;}
+    .page.spanish .report-item p{color:#2d6a1f;}
+    .page.spanish .report-item{border-color:#c8e6c0;}
+    .page.spanish .report-item{background:#f1f8ee;}
+    .page.spanish .intro-bar{border-bottom:1px solid #4a9e35;}
+    .page.spanish .gold-bar{background:linear-gradient(90deg,#4a9e35,#2d6a1f,#4a9e35);}
+    .page.spanish .sealed-alert{background:#fff5f5;border-color:#fca5a5;color:#cc2200;}
+    .page.spanish .deploy-alert{background:#f1f8ee;border-color:#4a9e35;color:#2d6a1f;}
+
     @media(max-width:600px){
-      .tiers{grid-template-columns:1fr;}
-      .two-col{grid-template-columns:1fr;}
+      .reporting-grid{grid-template-columns:1fr 1fr;}
       .header-top{flex-direction:column;}
       .header-right{text-align:left;}
+      .intro-bar{gap:1rem;}
     }
   </style>
 </head>
@@ -111,18 +114,17 @@
   <button class="print-btn" onclick="window.print()">⬇ Save as PDF / Print</button>
 </div>
 
+<!-- ==================== ENGLISH PAGE ==================== -->
 <div class="page">
-
-  <!-- HEADER -->
   <div class="header">
     <div class="header-top">
-      <img src="data:image/jpeg;base64,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" alt="Pest Pro LLC" class="logo"/>
+      <img src="data:image/jpeg;base64,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" alt="Pest Pro LLC" class="logo" onerror="this.style.display='none'"/>
+      <div style="font-size:1.1rem;font-weight:800;color:#1a2557;letter-spacing:0.05em;">PEST PRO, LLC</div>
       <div class="header-right">
         <strong>Prepared for:</strong>
         Vacation Village @ Parkway<br/>
         Managed by Vacatia Resorts<br/>
-        Back-of-House Staff Training<br/>
-        Housekeeping &amp; Maintenance
+        Back-of-House Staff Training
       </div>
     </div>
     <div class="gold-bar"></div>
@@ -130,39 +132,32 @@
 
   <div class="doc-title">
     <h1>PEST AWARENESS TRAINING — DELIVERY RUNSHEET</h1>
-    <div class="sub">CONFIDENTIAL · FOR TRAINER USE ONLY · 20-MINUTE BILINGUAL DELIVERY</div>
+    <div class="sub">FOR TRAINER USE · 20-MINUTE DELIVERY · HOUSEKEEPING &amp; MAINTENANCE STAFF</div>
   </div>
 
-  <!-- INTRO BAR -->
   <div class="intro-bar">
     <div class="intro-item"><strong>Duration</strong>20 Minutes</div>
-    <div class="intro-item"><strong>Delivery</strong>Bilingual (English / Spanish)</div>
     <div class="intro-item"><strong>Audience</strong>Housekeeping + Maintenance (BOH)</div>
     <div class="intro-item"><strong>Prepared by</strong>Pest Pro, LLC</div>
     <div class="intro-item"><strong>Contact</strong>(407) 922-2276</div>
   </div>
 
-  <!-- CONTENT -->
   <div class="content">
 
-    <!-- OBJECTIVE -->
     <div class="objective">
-      🎯 <strong>Objective:</strong> By the end of this training, staff will know exactly where to look, stop immediately on suspicion, prevent contamination spread, report clearly, and understand their role in protecting the property.
+      🎯 <strong>Objective:</strong> Staff will know where to look during room turnover, stop all work immediately upon suspicion, leave the room undisturbed, and report clearly to management.
     </div>
 
-    <!-- PRE-TRAINING CHECKLIST -->
+    <!-- PRE-TRAINING -->
     <div class="section">
       <div class="section-header">
         <div class="time-badge">BEFORE<br/>YOU<br/>START</div>
-        <div class="section-title-wrap">
-          <h2>Pre-Training Setup Checklist</h2>
-        </div>
+        <div class="section-title-wrap"><h2>Pre-Training Setup</h2></div>
       </div>
       <div class="section-body">
         <ul>
           <li>☐ &nbsp;Live samples staged — <strong>NOT visible to audience yet</strong></li>
           <li>☐ &nbsp;Laminated photos ready but set aside</li>
-          <li>☐ &nbsp;Translator briefed: one sentence at a time, full pause, no overlap</li>
           <li>☐ &nbsp;Room secured — no interruptions for 20 minutes</li>
         </ul>
       </div>
@@ -174,15 +169,15 @@
         <div class="time-badge">0:00<br/>—<br/>2:00</div>
         <div class="section-title-wrap">
           <h2>Opening &amp; Prevention</h2>
-          <div class="core-msg">"Bedbugs spread through movement of items — not by themselves."</div>
+          <div class="core-msg">"Bed bugs spread through the movement of items — not on their own."</div>
         </div>
       </div>
       <div class="section-body">
         <ul>
-          <li>Visual scan <strong>before</strong> stripping beds — every time, every room</li>
-          <li>Keep linens contained at all times</li>
-          <li>Never place linens or carts on beds</li>
-          <li>No cross-contact between rooms</li>
+          <li>Perform a visual scan <strong>before</strong> stripping the bed — every room, every time</li>
+          <li>Keep linens contained and off the floor at all times</li>
+          <li>Never place items from the cart directly onto beds</li>
+          <li>Avoid cross-contact between rooms — do not carry items from one unit to another</li>
         </ul>
       </div>
     </div>
@@ -192,41 +187,20 @@
       <div class="section-header">
         <div class="time-badge">2:00<br/>—<br/>8:00</div>
         <div class="section-title-wrap">
-          <h2>Code I — How to Inspect Beds</h2>
+          <h2>Code I — How to Inspect</h2>
           <div class="core-msg">"Focus on the head of the bed. That is where they are most often found."</div>
         </div>
       </div>
       <div class="section-body">
-        <div class="deploy-alert">🔍 Deploy laminated photos now. Pass in controlled order. No interruptions.</div>
-        <div class="tiers">
-          <div class="tier">
-            <div class="tier-label">Tier 1 — Every Time</div>
-            <ul>
-              <li>Mattress seams &amp; piping</li>
-              <li>Top corners of bed skirt</li>
-              <li>Box spring underside</li>
-              <li>Headboard — front, back &amp; mount points</li>
-              <li>Fabric folds &amp; crevices</li>
-            </ul>
-          </div>
-          <div class="tier">
-            <div class="tier-label">Tier 2 — Within 6–8 Ft</div>
-            <ul>
-              <li>Bed frame joints</li>
-              <li>Nightstands</li>
-              <li>Lamps &amp; alarm clocks</li>
-              <li>Wall outlets</li>
-              <li>Baseboards / carpet edge</li>
-            </ul>
-          </div>
-          <div class="tier">
-            <div class="tier-label">Tier 3 — Occasional</div>
-            <ul>
-              <li>Curtains (pleats &amp; seams)</li>
-            </ul>
-          </div>
+        <div class="deploy-alert">🔍 Distribute laminated photos now. Pass in controlled order.</div>
+        <p style="font-size:0.78rem;color:#555;margin-bottom:0.5rem;font-style:italic;">Housekeeping staff should visually inspect the following accessible areas during normal room turnover:</p>
+        <div class="inspection-list">
+          <div class="inspect-item"><div class="inspect-dot"></div><span>Top corners of the bed skirt — look for dark spots, staining, or shed skins</span></div>
+          <div class="inspect-item"><div class="inspect-dot"></div><span>Underside folds of the bed skirt where it meets the box spring</span></div>
+          <div class="inspect-item"><div class="inspect-dot"></div><span>Mattress seams and piping along all edges</span></div>
+          <div class="inspect-item"><div class="inspect-dot"></div><span>Fabric folds and crevices visible without moving or lifting furniture</span></div>
         </div>
-        <div class="deploy-alert" style="margin-top:0.6rem;">🧪 Deploy live samples now. Control passing — do not interrupt training flow.</div>
+        <div class="sealed-alert" style="margin-top:0.8rem;">🧪 Live samples: Pass sealed containers to staff now. <strong>Containers must remain sealed at all times. Do not attempt to open.</strong></div>
       </div>
     </div>
 
@@ -241,12 +215,11 @@
       </div>
       <div class="section-body">
         <div class="steps">
-          <div class="step-row"><div class="step-num">1</div><div class="step-text"><strong>Stop work immediately</strong></div></div>
-          <div class="step-row"><div class="step-num">2</div><div class="step-text">Do <strong>NOT</strong> continue cleaning</div></div>
-          <div class="step-row"><div class="step-num">3</div><div class="step-text">Do <strong>NOT</strong> move items unnecessarily</div></div>
-          <div class="step-row"><div class="step-num">4</div><div class="step-text">Exit the room</div></div>
-          <div class="step-row"><div class="step-num">5</div><div class="step-text">Secure / close the room</div></div>
-          <div class="step-row"><div class="step-num">6</div><div class="step-text"><strong>Report immediately</strong></div></div>
+          <div class="step-row"><div class="step-num">1</div><div class="step-text"><strong>Stop all work immediately</strong></div></div>
+          <div class="step-row"><div class="step-num">2</div><div class="step-text">Do <strong>NOT</strong> continue cleaning or servicing the room</div></div>
+          <div class="step-row"><div class="step-num">3</div><div class="step-text">Do <strong>NOT</strong> remove or disturb any items in the room</div></div>
+          <div class="step-row"><div class="step-num">4</div><div class="step-text">Exit the room and secure the door</div></div>
+          <div class="step-row"><div class="step-num">5</div><div class="step-text"><strong>Report to your supervisor immediately</strong></div></div>
         </div>
       </div>
     </div>
@@ -256,50 +229,44 @@
       <div class="section-header">
         <div class="time-badge">10:00<br/>—<br/>12:00</div>
         <div class="section-title-wrap">
-          <h2>Linen Handling — Contamination Control</h2>
-          <div class="core-msg">"Sheet → cart → next room = spread."</div>
+          <h2>Linen Handling in a Suspected or Confirmed Code I Room</h2>
+          <div class="core-msg">"Do not touch or remove linens from a suspected or confirmed Code I unit."</div>
         </div>
       </div>
       <div class="section-body">
         <ul>
-          <li>Bag linens <strong>inside the room</strong></li>
-          <li>Seal bag <strong>before</strong> removal</li>
-          <li>Do <strong>NOT</strong> transport loose linens under any circumstances</li>
+          <li>If Code I is suspected or confirmed — <strong>leave all linens in place</strong></li>
+          <li>Do not strip the bed, bag linens, or remove anything from the room</li>
+          <li>Management and pest control will direct next steps after the room is cleared</li>
         </ul>
       </div>
     </div>
 
-    <!-- 12:00–13:30 -->
+    <!-- 12:00–17:30 -->
     <div class="section">
       <div class="section-header">
-        <div class="time-badge">12:00<br/>—<br/>13:30</div>
-        <div class="section-title-wrap">
-          <h2>Post-Treatment Cleaning</h2>
-          <div class="core-msg">"Do not re-enter until cleared."</div>
-        </div>
-      </div>
-      <div class="section-body">
-        <ul>
-          <li>Only after <strong>management approval</strong>: replace linens · wipe surfaces · vacuum if required</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 13:30–17:30 -->
-    <div class="section">
-      <div class="section-header">
-        <div class="time-badge">13:30<br/>—<br/>17:30</div>
-        <div class="section-title-wrap">
-          <h2>Other Pests — Facility Responsibility</h2>
-        </div>
+        <div class="time-badge">12:00<br/>—<br/>17:30</div>
+        <div class="section-title-wrap"><h2>Other Pests — What to Look For</h2></div>
       </div>
       <div class="section-body">
         <table>
-          <thead><tr><th>Code</th><th>Pest</th><th>Key Actions</th></tr></thead>
+          <thead><tr><th>Code</th><th>Pest</th><th>What Housekeeping Should Know</th></tr></thead>
           <tbody>
-            <tr><td><span class="code-badge">R</span></td><td>Roaches</td><td>Clean behind refrigerators, under stoves, eliminate food debris</td></tr>
-            <tr><td><span class="code-badge">A</span></td><td>Ants</td><td>Clean spills immediately, remove moisture, report trails early</td></tr>
-            <tr><td><span class="code-badge">W</span></td><td>Wasps</td><td>Inspect patios, railings, overhangs — <strong>do NOT disturb nests</strong></td></tr>
+            <tr>
+              <td><span class="code-badge">R</span></td>
+              <td>Roaches</td>
+              <td>After treatment, dead insects may be found behind the refrigerator, under the stove, and inside cabinets — these areas should be cleaned and kept free of food debris. The refrigerator area is the most common activity zone.</td>
+            </tr>
+            <tr>
+              <td><span class="code-badge">A</span></td>
+              <td>Ants</td>
+              <td>Remove any moisture from surfaces. If ant trails are observed during turnover, report to supervisor early — do not attempt to treat.</td>
+            </tr>
+            <tr>
+              <td><span class="code-badge">W</span></td>
+              <td>Wasps</td>
+              <td>Check patios, railings, and overhangs during exterior cleaning. <strong>Do NOT disturb nests</strong> — report immediately to supervisor.</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -309,15 +276,12 @@
     <div class="section">
       <div class="section-header">
         <div class="time-badge">17:30<br/>—<br/>18:30</div>
-        <div class="section-title-wrap">
-          <h2>Unknown Pest Protocol</h2>
-        </div>
+        <div class="section-title-wrap"><h2>Unknown Pest — Protocol</h2></div>
       </div>
       <div class="section-body">
         <ul>
-          <li><strong>Do not guess</strong></li>
-          <li><strong>Do not ignore</strong></li>
-          <li><strong>Report immediately</strong></li>
+          <li>If you see something unfamiliar — <strong>do not guess, do not ignore</strong></li>
+          <li>Report to your supervisor immediately with the room number and description of what was observed</li>
         </ul>
       </div>
     </div>
@@ -332,55 +296,238 @@
         </div>
       </div>
       <div class="section-body">
-        <ul>
-          <li><strong>Room number</strong></li>
-          <li><strong>Exact location</strong> — bed, kitchen, patio, etc.</li>
-          <li><strong>What was observed:</strong> live insects · staining · nesting</li>
-        </ul>
+        <div class="reporting-grid">
+          <div class="report-item"><div class="icon">🚪</div><p>Room Number</p></div>
+          <div class="report-item"><div class="icon">📍</div><p>Exact Location in Room</p></div>
+          <div class="report-item"><div class="icon">👁</div><p>What Was Observed</p></div>
+        </div>
+        <p style="font-size:0.75rem;color:#555;margin-top:0.6rem;font-style:italic;">Include whether you saw live insects, staining, shed skins, or nesting material.</p>
       </div>
     </div>
 
-    <!-- CLOSING LINE -->
+    <!-- CLOSING -->
     <div class="closing-box">
-      <p><strong>CLOSING LINE — DELIVER THIS EXACTLY:</strong></p>
+      <p><strong>CLOSING — DELIVER THIS EXACTLY:</strong></p>
       <p>"Early detection keeps it in one room.<br/>Improper handling spreads it across the property."</p>
     </div>
 
-    <!-- WARNINGS + TRANSLATOR -->
-    <div class="two-col">
-      <div class="warn-box">
-        <h3>⚠ Failure Points — Watch For These</h3>
-        <ul>
-          <li>Staff continuing to clean after suspicion</li>
-          <li>Linens moved without bagging first</li>
-          <li>Headboards &amp; bed skirt tops skipped</li>
-          <li>Vague or incomplete reporting</li>
-        </ul>
-      </div>
-      <div class="trans-box">
-        <h3>Translator Rules — Non-Negotiable</h3>
-        <ul>
-          <li>One sentence → full stop → translate → continue</li>
-          <li>No overlapping speech</li>
-          <li><em>"Stop work immediately"</em></li>
-          <li><em>"Do not move contaminated items"</em></li>
-          <li><em>"Bag linens inside the room"</em></li>
-          <li><em>"Report immediately"</em></li>
-        </ul>
-      </div>
-    </div>
-
   </div>
 
-  <!-- FOOTER -->
   <div class="footer">
-    <img src="data:image/jpeg;base64,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" alt="Pest Pro LLC" class="footer-logo"/>
+    <div style="font-size:0.75rem;font-weight:700;color:#1a2557;letter-spacing:0.05em;">PEST PRO, LLC</div>
     <div class="footer-text">
-      Pest Pro, LLC · (407) 922-2276 · info@PestProLLC.com<br/>
+      (407) 922-2276 · info@PestProLLC.com<br/>
       Prepared exclusively for Vacation Village @ Parkway / Vacatia Resorts · Confidential
     </div>
   </div>
+</div>
 
+
+<!-- ==================== SPANISH PAGE ==================== -->
+<div class="page spanish">
+  <div class="header">
+    <div class="header-top">
+      <div style="font-size:1.1rem;font-weight:800;color:#2d6a1f;letter-spacing:0.05em;">PEST PRO, LLC</div>
+      <div class="header-right">
+        <strong>Preparado para:</strong>
+        Vacation Village @ Parkway<br/>
+        Administrado por Vacatia Resorts<br/>
+        Capacitación — Personal de Limpieza y Mantenimiento
+      </div>
+    </div>
+    <div class="gold-bar"></div>
+  </div>
+
+  <div class="doc-title">
+    <h1>CAPACITACIÓN DE CONCIENTIZACIÓN SOBRE PLAGAS</h1>
+    <div class="sub">PARA USO DEL INSTRUCTOR · ENTREGA DE 20 MINUTOS · PERSONAL DE LIMPIEZA Y MANTENIMIENTO</div>
+  </div>
+
+  <div class="intro-bar">
+    <div class="intro-item"><strong>Duración</strong>20 Minutos</div>
+    <div class="intro-item"><strong>Audiencia</strong>Personal de Limpieza y Mantenimiento</div>
+    <div class="intro-item"><strong>Preparado por</strong>Pest Pro, LLC</div>
+    <div class="intro-item"><strong>Contacto</strong>(407) 922-2276</div>
+  </div>
+
+  <div class="content">
+
+    <div class="objective">
+      🎯 <strong>Objetivo:</strong> El personal sabrá dónde buscar durante la limpieza de habitaciones, detendrá todo trabajo al sospechar una infestación, dejará la habitación sin tocar, y reportará claramente a la gerencia.
+    </div>
+
+    <!-- PRE-TRAINING -->
+    <div class="section">
+      <div class="section-header">
+        <div class="time-badge">ANTES<br/>DE<br/>EMPEZAR</div>
+        <div class="section-title-wrap"><h2>Preparación Antes de la Capacitación</h2></div>
+      </div>
+      <div class="section-body">
+        <ul>
+          <li>☐ &nbsp;Muestras vivas preparadas — <strong>NO visibles para el grupo todavía</strong></li>
+          <li>☐ &nbsp;Fotos laminadas listas pero guardadas</li>
+          <li>☐ &nbsp;Sala asegurada — sin interrupciones por 20 minutos</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 0:00–2:00 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="time-badge">0:00<br/>—<br/>2:00</div>
+        <div class="section-title-wrap">
+          <h2>Introducción y Prevención</h2>
+          <div class="core-msg">"Las chinches se dispersan a través del movimiento de objetos — no por sí solas."</div>
+        </div>
+      </div>
+      <div class="section-body">
+        <ul>
+          <li>Haga una inspección visual <strong>antes</strong> de retirar la ropa de cama — en cada habitación, cada vez</li>
+          <li>Mantenga la ropa de cama recogida y fuera del piso en todo momento</li>
+          <li>Nunca coloque artículos del carrito directamente sobre las camas</li>
+          <li>Evite el contacto entre habitaciones — no lleve artículos de una unidad a otra</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2:00–8:00 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="time-badge">2:00<br/>—<br/>8:00</div>
+        <div class="section-title-wrap">
+          <h2>Código I — Cómo Inspeccionar</h2>
+          <div class="core-msg">"Concéntrese en la cabecera de la cama. Ahí es donde más se encuentran."</div>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="deploy-alert">🔍 Distribuya las fotos laminadas ahora. Páselas en orden controlado.</div>
+        <p style="font-size:0.78rem;color:#555;margin-bottom:0.5rem;font-style:italic;">El personal de limpieza debe revisar visualmente las siguientes áreas accesibles durante la limpieza normal de la habitación:</p>
+        <div class="inspection-list">
+          <div class="inspect-item"><div class="inspect-dot"></div><span>Esquinas superiores de la falda de la cama — busque manchas oscuras, rastros, o pieles mudadas</span></div>
+          <div class="inspect-item"><div class="inspect-dot"></div><span>Dobleces en la parte inferior de la falda de la cama donde toca el colchonero</span></div>
+          <div class="inspect-item"><div class="inspect-dot"></div><span>Costuras y bordes del colchón por todos los lados</span></div>
+          <div class="inspect-item"><div class="inspect-dot"></div><span>Dobleces y hendiduras de tela visibles sin mover ni levantar muebles</span></div>
+        </div>
+        <div class="sealed-alert" style="margin-top:0.8rem;">🧪 Muestras vivas: Pase los envases sellados al personal ahora. <strong>Los envases deben permanecer sellados en todo momento. No intente abrirlos.</strong></div>
+      </div>
+    </div>
+
+    <!-- 8:00–10:00 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="time-badge">8:00<br/>—<br/>10:00</div>
+        <div class="section-title-wrap">
+          <h2>Código I Sospechoso — Qué Hacer</h2>
+          <div class="core-msg">"No termine de limpiar la habitación."</div>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="steps">
+          <div class="step-row"><div class="step-num">1</div><div class="step-text"><strong>Detenga todo el trabajo de inmediato</strong></div></div>
+          <div class="step-row"><div class="step-num">2</div><div class="step-text">No <strong>continúe</strong> limpiando ni dando servicio a la habitación</div></div>
+          <div class="step-row"><div class="step-num">3</div><div class="step-text">No <strong>mueva</strong> ni toque ningún artículo dentro de la habitación</div></div>
+          <div class="step-row"><div class="step-num">4</div><div class="step-text">Salga de la habitación y asegure la puerta</div></div>
+          <div class="step-row"><div class="step-num">5</div><div class="step-text"><strong>Reporte a su supervisor de inmediato</strong></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10:00–12:00 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="time-badge">10:00<br/>—<br/>12:00</div>
+        <div class="section-title-wrap">
+          <h2>Manejo de Ropa de Cama en una Habitación con Código I</h2>
+          <div class="core-msg">"No toque ni retire la ropa de cama de una unidad con Código I sospechado o confirmado."</div>
+        </div>
+      </div>
+      <div class="section-body">
+        <ul>
+          <li>Si se sospecha o confirma el Código I — <strong>deje toda la ropa de cama en su lugar</strong></li>
+          <li>No quite las sábanas, no las empaque ni retire nada de la habitación</li>
+          <li>La gerencia y el control de plagas darán las instrucciones después de que se evalúe la habitación</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 12:00–17:30 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="time-badge">12:00<br/>—<br/>17:30</div>
+        <div class="section-title-wrap"><h2>Otras Plagas — Qué Observar</h2></div>
+      </div>
+      <div class="section-body">
+        <table>
+          <thead><tr><th>Código</th><th>Plaga</th><th>Lo Que el Personal de Limpieza Debe Saber</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="code-badge">R</span></td>
+              <td>Cucarachas</td>
+              <td>Después del tratamiento, pueden encontrarse insectos muertos detrás del refrigerador, debajo del fogón y dentro de los gabinetes — estas áreas deben limpiarse y mantenerse libres de restos de comida. El área del refrigerador es la zona de mayor actividad.</td>
+            </tr>
+            <tr>
+              <td><span class="code-badge">A</span></td>
+              <td>Hormigas</td>
+              <td>Elimine cualquier humedad de las superficies. Si observa rastros de hormigas durante la limpieza, repórtelo a su supervisor — no intente tratar el problema usted mismo.</td>
+            </tr>
+            <tr>
+              <td><span class="code-badge">W</span></td>
+              <td>Avispas</td>
+              <td>Revise los patios, barandas y aleros durante la limpieza exterior. <strong>NO perturbe los nidos</strong> — repórtelo de inmediato a su supervisor.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 17:30–18:30 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="time-badge">17:30<br/>—<br/>18:30</div>
+        <div class="section-title-wrap"><h2>Plaga Desconocida — Protocolo</h2></div>
+      </div>
+      <div class="section-body">
+        <ul>
+          <li>Si ve algo desconocido — <strong>no adivine, no lo ignore</strong></li>
+          <li>Repórtelo a su supervisor de inmediato con el número de habitación y una descripción de lo que observó</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 18:30–20:00 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="time-badge">18:30<br/>—<br/>20:00</div>
+        <div class="section-title-wrap">
+          <h2>Cómo Reportar Correctamente</h2>
+          <div class="core-msg">"Un reporte claro evita demoras y evita que la plaga se extienda."</div>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="reporting-grid">
+          <div class="report-item"><div class="icon">🚪</div><p>Número de Habitación</p></div>
+          <div class="report-item"><div class="icon">📍</div><p>Ubicación Exacta en la Habitación</p></div>
+          <div class="report-item"><div class="icon">👁</div><p>Lo Que Observó</p></div>
+        </div>
+        <p style="font-size:0.75rem;color:#555;margin-top:0.6rem;font-style:italic;">Indique si vio insectos vivos, manchas, pieles mudadas o material de nido.</p>
+      </div>
+    </div>
+
+    <!-- CLOSING -->
+    <div class="closing-box">
+      <p><strong>CIERRE — ENTREGUE ESTAS PALABRAS EXACTAS:</strong></p>
+      <p>"La detección temprana mantiene el problema en una sola habitación.<br/>El manejo incorrecto lo extiende por toda la propiedad."</p>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div style="font-size:0.75rem;font-weight:700;color:#2d6a1f;letter-spacing:0.05em;">PEST PRO, LLC</div>
+    <div class="footer-text">
+      (407) 922-2276 · info@PestProLLC.com<br/>
+      Preparado exclusivamente para Vacation Village @ Parkway / Vacatia Resorts · Confidencial
+    </div>
+  </div>
 </div>
 
 </body>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rodent Eradication Service Agreement — Rehabilitation Center of Orlando | Pest Pro LLC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:#f0f0f0;padding:1.5rem;}
+    @media print{
+      body{background:white;padding:0;margin:0;}
+      .no-print{display:none!important;}
+      .page{box-shadow:none!important;margin:0!important;page-break-after:always;}
+      .page:last-child{page-break-after:auto;}
+      .section{page-break-inside:avoid;}
+    }
+    .print-bar{max-width:820px;margin:0 auto 1rem;text-align:right;}
+    .print-btn{background:#1a2557;color:white;border:none;padding:0.65rem 1.6rem;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:3px;}
+    .page{background:white;max-width:820px;margin:0 auto 2rem;box-shadow:0 4px 20px rgba(0,0,0,0.12);}
+
+    /* HEADER */
+    .header{padding:1.8rem 2.5rem 1.2rem;border-bottom:3px solid #1a2557;}
+    .header-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1rem;}
+    .company-block h2{font-size:1rem;font-weight:800;color:#1a2557;letter-spacing:0.05em;}
+    .company-block p{font-size:0.75rem;color:#555;line-height:1.7;margin-top:0.2rem;}
+    .doc-info{text-align:right;font-size:0.75rem;color:#555;line-height:1.7;}
+    .doc-info strong{color:#1a2557;display:block;font-size:0.82rem;}
+    .gold-bar{height:3px;background:linear-gradient(90deg,#FFB800,#e0a200,#FFB800);}
+    .doc-title-bar{background:#1a2557;color:white;padding:0.9rem 2.5rem;display:flex;justify-content:space-between;align-items:center;}
+    .doc-title-bar h1{font-size:1rem;font-weight:700;letter-spacing:0.04em;}
+    .doc-title-bar span{font-size:0.75rem;opacity:0.75;font-style:italic;}
+
+    /* CLIENT INFO */
+    .client-info{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid #e5e7eb;}
+    .client-cell{padding:0.8rem 2.5rem;border-right:1px solid #e5e7eb;}
+    .client-cell:last-child{border-right:none;}
+    .client-cell label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#888;display:block;margin-bottom:0.2rem;}
+    .client-cell p{font-size:0.82rem;color:#1a2557;font-weight:600;}
+
+    /* CONTENT */
+    .content{padding:1.5rem 2.5rem 2rem;}
+    h3{font-size:0.82rem;font-weight:800;color:#1a2557;text-transform:uppercase;letter-spacing:0.08em;margin:1.5rem 0 0.6rem;padding-bottom:0.4rem;border-bottom:2px solid #FFB800;}
+    h3:first-child{margin-top:0;}
+    p{font-size:0.82rem;color:#333;line-height:1.75;margin-bottom:0.6rem;}
+    ul{padding-left:1.2rem;margin-bottom:0.8rem;}
+    li{font-size:0.82rem;color:#333;line-height:1.75;}
+    strong{color:#1a2557;}
+    .section{margin-bottom:0.5rem;}
+
+    /* SCHEDULE TABLE */
+    .schedule-table{width:100%;border-collapse:collapse;margin:0.8rem 0;font-size:0.8rem;}
+    .schedule-table th{background:#1a2557;color:white;padding:0.5rem 0.8rem;text-align:left;font-weight:600;font-size:0.75rem;letter-spacing:0.04em;}
+    .schedule-table td{padding:0.5rem 0.8rem;border-bottom:1px solid #e5e7eb;color:#333;vertical-align:top;}
+    .schedule-table tr:last-child td{border-bottom:none;}
+    .schedule-table tr.total-row td{font-weight:700;color:#1a2557;background:#f8f9fc;border-top:2px solid #1a2557;}
+    .schedule-table tr.subtotal-row td{font-weight:600;background:#fffbf0;color:#cc6600;}
+
+    /* SIGNATURE */
+    .signature-section{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid #e5e7eb;}
+    .sig-block label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#888;display:block;margin-bottom:0.4rem;}
+    .sig-line{border-bottom:1px solid #333;height:2rem;margin-bottom:0.3rem;}
+    .sig-block p{font-size:0.72rem;color:#555;}
+
+    /* FOOTER */
+    .footer{border-top:3px solid #1a2557;padding:0.8rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;}
+    .footer-left{font-size:0.7rem;font-weight:700;color:#1a2557;letter-spacing:0.05em;}
+    .footer-right{font-size:0.65rem;color:#888;text-align:right;line-height:1.6;}
+
+    .highlight-box{background:#f0f3fa;border-left:4px solid #1a2557;padding:0.8rem 1.2rem;margin:0.8rem 0;font-size:0.82rem;color:#1a2557;line-height:1.7;}
+    .warning-box{background:#fff5f5;border-left:4px solid #cc2200;padding:0.8rem 1.2rem;margin:0.8rem 0;font-size:0.82rem;color:#333;line-height:1.7;}
+
+    @media(max-width:600px){
+      .client-info{grid-template-columns:1fr;}
+      .client-cell{border-right:none;border-bottom:1px solid #e5e7eb;}
+      .signature-section{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="print-bar no-print">
+  <button class="print-btn" onclick="window.print()">⬇ Save as PDF / Print</button>
+</div>
+
+<div class="page">
+
+  <div class="header">
+    <div class="header-top">
+      <div class="company-block">
+        <h2>PEST PRO, LLC</h2>
+        <p>3211 Vineland Road, Suite 107 · Kissimmee, FL 34746<br/>
+        Office: (407) 922-2276 · info@PestProLLC.com<br/>
+        Licensed and Insured · State of Florida · "Our 40th Year"</p>
+      </div>
+      <div class="doc-info">
+        <strong>SERVICE AGREEMENT</strong>
+        Date: March 18, 2026<br/>
+        Agreement No.: PP-2026-RCO-001<br/>
+        Service Type: Rodent Eradication Program
+      </div>
+    </div>
+    <div class="gold-bar"></div>
+  </div>
+
+  <div class="doc-title-bar">
+    <h1>RODENT ERADICATION SERVICE AGREEMENT</h1>
+    <span>Rehabilitation Center of Orlando</span>
+  </div>
+
+  <div class="client-info">
+    <div class="client-cell">
+      <label>Client / Facility</label>
+      <p>Rehabilitation Center of Orlando</p>
+    </div>
+    <div class="client-cell">
+      <label>Service Address</label>
+      <p>9311 S. Orange Blossom Trail<br/>Orlando, FL 32837</p>
+    </div>
+    <div class="client-cell">
+      <label>Account Manager / Contact</label>
+      <p>Thomas · Regional Maintenance Director</p>
+    </div>
+    <div class="client-cell">
+      <label>Managed / Owned By</label>
+      <p>Excelsior Care Group</p>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <h3>Program Overview</h3>
+      <p>Pest Pro, LLC is pleased to report that the first week of the Rodent Eradication Program at the Rehabilitation Center of Orlando has been completed with significant results. Progress during the initial service week has exceeded our expectations and we are currently ahead of our projected timeline. We are confident that this positive trajectory will continue through the duration of the program.</p>
+      <p>This agreement outlines the full scope of the Rodent Eradication Program, including the week-by-week service schedule, pricing, responsibilities of all parties, and the terms and conditions governing the services provided by Pest Pro, LLC.</p>
+    </div>
+
+    <div class="section">
+      <h3>Target Areas of Service</h3>
+      <p>The following areas have been identified as primary and secondary zones of concern and will be addressed throughout the duration of this program.</p>
+      <p><strong>Interior Target Areas:</strong> Dietary kitchen and all associated storage areas, office areas, and common areas throughout the facility.</p>
+      <p><strong>Exterior Target Areas:</strong> Full building perimeter, roof penetrations including lead stacks, and all points where air conditioning equipment is secured to the structure.</p>
+      <p>Commercial grade deodorizer will be applied to affected areas as needed throughout the course of this program.</p>
+    </div>
+
+    <div class="section">
+      <h3>Week-by-Week Service Schedule and Pricing</h3>
+      <p>This program is invoiced on a weekly basis. Each invoice will reflect the services rendered during that specific week. The schedule for subsequent weeks is determined at the conclusion of the prior week based on progress made and conditions observed. All pricing is subject to applicable Orange County, Florida sales tax.</p>
+
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Week</th>
+            <th>Service Period</th>
+            <th>Service Frequency</th>
+            <th>Visits</th>
+            <th>Service Cost</th>
+            <th>Materials</th>
+            <th>Week Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Week 1</strong></td>
+            <td>Mar 13 – Mar 19, 2026</td>
+            <td>Daily service (7 days)</td>
+            <td>7 × $180</td>
+            <td>$1,260.00</td>
+            <td>$1,100.00</td>
+            <td><strong>$2,360.00</strong></td>
+          </tr>
+          <tr class="subtotal-row">
+            <td colspan="6" style="font-size:0.72rem;font-style:italic;">Materials startup: Initial equipment, bait stations, rodenticide, and deployment supplies. One-time charge.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Week 2</strong></td>
+            <td>Mar 20 – Mar 26, 2026</td>
+            <td>Every other day</td>
+            <td>4 × $180</td>
+            <td>$720.00</td>
+            <td>—</td>
+            <td><strong>$720.00</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Week 3</strong></td>
+            <td>Mar 27 – Apr 2, 2026</td>
+            <td>Three times per week</td>
+            <td>3 × $180</td>
+            <td>$540.00</td>
+            <td>—</td>
+            <td><strong>$540.00</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Week 4</strong></td>
+            <td>Apr 3 – Apr 9, 2026</td>
+            <td>Three times per week</td>
+            <td>3 × $180</td>
+            <td>$540.00</td>
+            <td>—</td>
+            <td><strong>$540.00</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Weeks 5–6</strong></td>
+            <td>Apr 10 – Apr 23, 2026</td>
+            <td>To be determined based on progress</td>
+            <td>TBD</td>
+            <td>TBD</td>
+            <td>—</td>
+            <td><strong>TBD</strong></td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="6"><strong>Projected Program Total (Weeks 1–4)</strong></td>
+            <td><strong>$4,160.00</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="font-size:0.75rem;color:#888;font-style:italic;">All invoices are subject to applicable Orange County, Florida sales tax. Each week's invoice will be issued upon completion of that week's services. The service frequency for Weeks 5 and 6 will be determined at the conclusion of Week 4 based on observed progress and conditions.</p>
+
+      <div class="highlight-box">
+        <strong>Projected Completion:</strong> Full control of the rodent infestation is anticipated by Week 6 or sooner, contingent upon the timely completion of all client responsibilities outlined in this agreement, including the repair of all interior and exterior penetrations, removal of all debris from surrounding areas, and trimming of all trees, overhanging limbs, shrubs, and bushes away from the structure.
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Client and Maintenance Staff Responsibilities</h3>
+      <p>The results of this program are directly dependent upon the cooperation and prompt action of the client's property management and maintenance team. The following responsibilities must be fulfilled to ensure the effectiveness of treatment and to achieve the projected timeline for full control.</p>
+      <ul>
+        <li>Complete all exclusion work and structural repairs to seal interior and exterior rodent entry points.</li>
+        <li>Ensure all trees, overhanging limbs, shrubs, and bushes are trimmed and maintained away from the building structure.</li>
+        <li>Remove and maintain all excess leaves and debris from all areas surrounding the building.</li>
+        <li>Maintain proper sanitation in all areas, including pepper decking, ceiling tiles, and drop ceiling spaces.</li>
+        <li>Report any observed pest activity to the designated site log or directly to the Pest Pro account manager without delay.</li>
+        <li>Ensure all doors and other points of entry are maintained and kept closed to deter additional rodent entry.</li>
+        <li>Keep all dumpster areas, trash areas, and surrounding entrances clear of discarded food and unsanitary debris.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Pest Pro Response Commitments</h3>
+      <ul>
+        <li>Any reported pest activity will be addressed within 24 hours of notice.</li>
+        <li>All calls and text messages will be returned within 4 hours.</li>
+        <li>A written weekly progress report will be provided at the conclusion of each service week, addressing observations, actions taken, and progress to date.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Pests Covered</h3>
+      <p>This service agreement is specific to rodent eradication (rats and mice) at the above-referenced property. This agreement does not cover termites, bed bugs, fleas, poisonous or stinging insects, spiders, Pharaoh ants, carpenter ants, acrobat ants, snakes, or wildlife including raccoons, possums, or squirrels, unless otherwise specified in writing.</p>
+    </div>
+
+    <div class="section">
+      <h3>General Terms and Conditions</h3>
+
+      <p><strong>Liability.</strong> Pest Pro, LLC liability for any damages is strictly limited to such damages as are directly caused by the negligence of the company or its authorized employees.</p>
+
+      <p><strong>Resident and Employee Notification.</strong> It is understood and agreed that the primary responsibility rests with the property owners and managers to provide necessary information to all residents and employees regarding services being performed. Property owners and managers must inform all relevant parties if scented or chemical products will be in use during treatment. Upon receiving such notification, it is the responsibility of each individual to take any necessary personal precautions to ensure their own safety and well-being.</p>
+
+      <p><strong>Service Results.</strong> Results of services rendered are strictly relative to and dependent upon the cooperation of the client as to sanitary conditions, maintenance, accessibility of the premises, and prompt reporting of pest activity. If the client does not cooperate as outlined in this agreement, service may continue but results cannot be assured and the client will be charged for any additional service required as a result.</p>
+
+      <p><strong>Pesticide Usage.</strong> All pesticides anticipated for use are EPA-approved and will be applied in strict accordance with label directions and restrictions.</p>
+
+      <p><strong>Equipment Replacement.</strong> Replacement of any damaged or missing equipment originally installed by Pest Pro, LLC will be replaced and invoiced at current rates.</p>
+
+      <p><strong>Payment Terms.</strong> All invoices are due and payable within 30 days of issuance. Invoices will be issued on a weekly basis upon completion of each week's services.</p>
+
+      <p><strong>Indemnification.</strong> Pest Pro, LLC agrees to indemnify and hold harmless the client, their agents, partners, and employees against any and all liability, including legal costs and expenses, on account of death or injury to any person or damage to property arising out of or in any way relating to the performance of this agreement, due to the sole negligence of Pest Pro, LLC, or their partners, employees, or agents.</p>
+    </div>
+
+    <!-- SIGNATURE -->
+    <div class="signature-section">
+      <div class="sig-block">
+        <label>Authorized — Pest Pro, LLC</label>
+        <div class="sig-line"></div>
+        <p>Daniel J. Rumsey, CPO · President</p>
+        <p>Date: ___________________________</p>
+      </div>
+      <div class="sig-block">
+        <label>Authorized — Client / Facility</label>
+        <div class="sig-line"></div>
+        <p>Name: ___________________________</p>
+        <p>Title: ____________________________</p>
+        <p>Date: ___________________________</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">PEST PRO, LLC · (407) 922-2276 · info@PestProLLC.com</div>
+    <div class="footer-right">
+      3211 Vineland Road, Suite 107 · Kissimmee, FL 34746<br/>
+      Agreement No. PP-2026-RCO-001 · Confidential
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

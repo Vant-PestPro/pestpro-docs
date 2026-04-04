@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Week 3 Progress Report — Rehabilitation Center of Orlando</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:#f0f0f0;padding:1.5rem;}
+    @media print{
+      body{background:white;padding:0;margin:0;font-size:11pt;}
+      .no-print{display:none!important;}
+      .doc{box-shadow:none!important;}
+      h3{page-break-after:avoid;page-break-inside:avoid;}
+      p{page-break-inside:avoid;orphans:3;widows:3;}
+      .section{page-break-inside:avoid;}
+      .highlight-box,.success-box,.warning-box{page-break-inside:avoid;}
+      .photo-item{page-break-inside:avoid;}
+      .photo-grid,.photo-grid-2{page-break-inside:avoid;}
+      .schedule-table{page-break-inside:avoid;}
+      .client-grid{page-break-inside:avoid;}
+      ul{page-break-inside:avoid;}
+      li{page-break-inside:avoid;}
+      .header,.doc-title-bar,.client-grid{page-break-inside:avoid;page-break-after:avoid;}
+      .footer{page-break-inside:avoid;}
+    }
+    .print-bar{max-width:820px;margin:0 auto 1rem;text-align:right;}
+    .print-btn{background:#1a2557;color:white;border:none;padding:0.65rem 1.6rem;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:3px;}
+    .doc{background:white;max-width:820px;margin:0 auto;box-shadow:0 4px 20px rgba(0,0,0,0.12);}
+    .header{padding:1.8rem 2.5rem 1.2rem;border-bottom:3px solid #1a2557;}
+    .header-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1rem;}
+    .logo{height:120px;width:auto;}
+    .company-block p{font-size:0.75rem;color:#555;line-height:1.7;margin-top:0.3rem;}
+    .doc-info{text-align:right;font-size:0.75rem;color:#555;line-height:1.8;}
+    .doc-info strong{color:#1a2557;display:block;font-size:0.88rem;font-weight:800;}
+    .gold-bar{height:3px;background:linear-gradient(90deg,#FFB800,#e0a200,#FFB800);}
+    .doc-title-bar{background:#1a2557;color:white;padding:1rem 2.5rem;}
+    .doc-title-bar h1{font-size:1rem;font-weight:700;letter-spacing:0.04em;}
+    .doc-title-bar .sub{font-size:0.75rem;opacity:0.75;margin-top:0.2rem;}
+    .client-grid{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #e5e7eb;}
+    .client-cell{padding:0.8rem 2.5rem;border-right:1px solid #e5e7eb;}
+    .client-cell:nth-child(even){border-right:none;}
+    .client-cell:nth-child(3),.client-cell:nth-child(4){border-top:1px solid #e5e7eb;}
+    .client-cell label{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#999;display:block;margin-bottom:0.2rem;}
+    .client-cell p{font-size:0.82rem;color:#1a2557;font-weight:600;}
+    .content{padding:1.8rem 2.5rem 2rem;}
+    h3{font-size:0.8rem;font-weight:800;color:#1a2557;text-transform:uppercase;letter-spacing:0.08em;margin:1.8rem 0 0.6rem;padding-bottom:0.4rem;border-bottom:2px solid #FFB800;}
+    h3:first-child{margin-top:0;}
+    p{font-size:0.82rem;color:#333;line-height:1.8;margin-bottom:0.7rem;}
+    ul{padding-left:1.3rem;margin-bottom:0.8rem;}
+    li{font-size:0.82rem;color:#333;line-height:1.8;margin-bottom:0.1rem;}
+    strong{color:#1a2557;}
+    .highlight-box{background:#f0f3fa;border-left:4px solid #1a2557;padding:0.9rem 1.2rem;margin:0.8rem 0;font-size:0.82rem;color:#1a2557;line-height:1.8;}
+    .success-box{background:#f0f8f0;border-left:4px solid #2d7a3a;padding:0.9rem 1.2rem;margin:0.8rem 0;font-size:0.82rem;color:#1a2557;line-height:1.8;}
+    .warning-box{background:#fffbf0;border-left:4px solid #e0a200;padding:0.9rem 1.2rem;margin:0.8rem 0;font-size:0.82rem;color:#1a2557;line-height:1.8;}
+    .schedule-table{width:100%;border-collapse:collapse;margin:0.8rem 0;font-size:0.79rem;}
+    .schedule-table th{background:#1a2557;color:white;padding:0.5rem 0.8rem;text-align:left;font-weight:600;font-size:0.72rem;letter-spacing:0.04em;}
+    .schedule-table td{padding:0.5rem 0.8rem;border-bottom:1px solid #e5e7eb;color:#333;vertical-align:top;line-height:1.5;}
+    .schedule-table tr:last-child td{border-bottom:none;}
+    .schedule-table tr.total-row td{font-weight:700;color:#1a2557;background:#f8f9fc;border-top:2px solid #1a2557;}
+    .schedule-table tr.completed td{background:#f0f8f0;}
+    .schedule-table tr.active td{background:#fffbf0;}
+    .badge{display:inline-block;background:#2d7a3a;color:white;font-size:0.65rem;font-weight:700;padding:0.1rem 0.5rem;border-radius:2px;letter-spacing:0.05em;}
+    .badge-active{display:inline-block;background:#FFB800;color:#1a2557;font-size:0.65rem;font-weight:700;padding:0.1rem 0.5rem;border-radius:2px;letter-spacing:0.05em;}
+    .photo-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin:1rem 0;}
+    .photo-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0;}
+    .photo-item{border:1px solid #e5e7eb;border-radius:3px;overflow:hidden;}
+    .photo-item img{width:100%;height:220px;object-fit:cover;display:block;}
+    .photo-item.tall img{height:300px;}
+    .photo-caption{padding:0.5rem 0.7rem;font-size:0.72rem;color:#555;line-height:1.5;background:#f8f9fc;border-top:1px solid #e5e7eb;}
+    .photo-placeholder{width:100%;height:220px;background:#f0f3fa;display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:#999;text-align:center;padding:1rem;}
+    .footer{border-top:3px solid #1a2557;padding:0.8rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;}
+    .footer-left{font-size:0.72rem;font-weight:700;color:#1a2557;letter-spacing:0.05em;}
+    .footer-right{font-size:0.65rem;color:#888;text-align:right;line-height:1.6;}
+    @media(max-width:600px){
+      .client-grid{grid-template-columns:1fr;}
+      .photo-grid,.photo-grid-2{grid-template-columns:1fr;}
+      .client-cell:nth-child(even){border-right:none;border-left:none;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="print-bar no-print">
+  <button class="print-btn" onclick="window.print()">⬇ Save as PDF / Print</button>
+</div>
+
+<div class="doc">
+
+  <div class="header">
+    <div class="header-top">
+      <div>
+        <img src="https://vant-pestpro.github.io/pestpro-docs/photos/logo-pestpro.jpg" alt="Pest Pro LLC" class="logo"/>
+        <p>3211 Vineland Road, Suite 107 · Kissimmee, FL 34746<br/>
+        Office: (407) 922-2276 · info@PestProLLC.com<br/>
+        Licensed &amp; Insured · State of Florida<br/><em>"Our 40th Year"</em></p>
+      </div>
+      <div class="doc-info">
+        <strong>WEEK 3 PROGRESS REPORT</strong>
+        Report No.: PP-2026-RCO-W3<br/>
+        Date Issued: April 4, 2026<br/>
+        Report Period: March 27 – April 2, 2026<br/>
+        Service Type: Rodent Eradication Program
+      </div>
+    </div>
+    <div class="gold-bar"></div>
+  </div>
+
+  <div class="doc-title-bar">
+    <h1>RODENT ERADICATION PROGRAM — WEEK 3 PROGRESS REPORT</h1>
+    <div class="sub">Rehabilitation Center of Orlando · Managed by Excelsior Care Group</div>
+  </div>
+
+  <div class="client-grid">
+    <div class="client-cell"><label>Facility Name</label><p>Rehabilitation Center of Orlando</p></div>
+    <div class="client-cell"><label>Service Address</label><p>9311 S. Orange Blossom Trail, Orlando, FL 32837</p></div>
+    <div class="client-cell"><label>Management Group</label><p>Excelsior Care Group</p></div>
+    <div class="client-cell"><label>Site Contact</label><p>Thomas, Regional Maintenance Director<br/>George, Chief Engineer</p></div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <h3>Week 3 Executive Summary</h3>
+      <p>Week 3 of the Rodent Eradication Program at the Rehabilitation Center of Orlando continues the trend of measurable, sustained progress. The active rodent population within the facility has declined significantly from the levels observed during the program's initial weeks, and the coordinated efforts of both Pest Pro service personnel and the Excelsior maintenance team are producing the results this program was designed to deliver.</p>
+      <div class="success-box">
+        <strong>Week 3 Status: Continued Decline — Program Progressing as Expected.</strong> Pest Pro service personnel located and removed a total of 2 rodents from the dietary areas during Week 3 service visits — a substantial reduction from the capture volumes of Weeks 1 and 2, reflecting the effectiveness of the ongoing treatment and exclusion strategy. Evidence of at least one additional rodent casualty was identified within the drop ceiling and wall void spaces; however, this individual could not be fully located or retrieved due to access limitations. On the structural remediation front, maintenance staff have completed the sealing of roof penetration points, as documented in the photographic record accompanying this report. Final-stage work, including the repair and sealing of HVAC ducting and perimeter tree trimming, is currently scheduled or already underway.
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Week 3 Activities and Observations</h3>
+      <p>Services were conducted at a three-times-per-week frequency during Week 3, consistent with the service adjustment communicated in the Week 2 report. The following activities and conditions were observed and addressed during this reporting period.</p>
+      <ul>
+        <li><strong>Rodent Removal — Dietary Areas:</strong> Pest Pro service personnel located and removed 2 rodents from the dietary areas during Week 3 service visits. All mechanical traps, glue boards, and monitoring stations were checked, reset, and rebaited at each visit in accordance with program protocols.</li>
+        <li><strong>Additional Casualty — Void Spaces:</strong> Evidence of at least one additional rodent casualty was detected within the drop ceiling and/or wall void spaces. This individual could not be fully located or physically retrieved due to the nature of the access limitations within those structural areas. The presence of this casualty is consistent with program effectiveness and is not cause for concern; odor dissipation is expected within a normal timeframe.</li>
+        <li><strong>Roof Penetration Points — Sealed by Maintenance:</strong> Maintenance staff have completed the sealing of identified roof penetration points during Week 3. Photographic documentation of this work has been provided and is included in this report. The closure of these access points represents a critical milestone in the facility's long-term exclusion efforts and is commended.</li>
+        <li><strong>HVAC Ducting — Repair and Sealing:</strong> Remediation of the damaged HVAC ducting above the drop ceiling in the dietary area — one of the most significant structural vulnerabilities identified at the program's outset — is either currently scheduled or already underway. Completion of this work remains a high-priority item and must be brought to full resolution before the program can be considered structurally complete.</li>
+        <li><strong>Tree Trimming:</strong> Perimeter tree trimming, which addresses the exterior harborage and potential roof access conditions contributing to ongoing rodent pressure on the building, is currently scheduled or already underway. This item is directly linked to the program's long-term success and should be completed without delay.</li>
+        <li><strong>Interior and Perimeter Conditions:</strong> Interior conditions within the dietary areas and adjacent spaces continue to show improvement. Pest Pro service personnel will continue to monitor all treatment zones at each remaining service visit and will report any change in activity levels immediately.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Structural Remediation — Status Summary</h3>
+      <p>The following table reflects the current status of all structural remediation items identified during the initial assessment and tracked throughout the program. Completion of all open items remains essential to the program's long-term effectiveness and the prevention of reinfestation.</p>
+      <div class="warning-box">
+        <strong>Note:</strong> While the interior program has produced substantial reductions in active rodent population, sustained control depends on the full completion of all structural work. Pest Pro urges the maintenance team to prioritize all remaining open items — particularly HVAC duct sealing and tree trimming — before the close of the program.
+      </div>
+
+      <table class="schedule-table" style="margin-top:0.8rem;">
+        <thead>
+          <tr><th>Remediation Item</th><th>Responsible Party</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr class="completed">
+            <td>Interior penetration point sealing (floors/walls)</td>
+            <td>Pest Pro</td>
+            <td><span class="badge">COMPLETED</span></td>
+          </tr>
+          <tr class="completed">
+            <td>Roof penetration point sealing</td>
+            <td>Maintenance Staff</td>
+            <td><span class="badge">COMPLETED</span></td>
+          </tr>
+          <tr class="active">
+            <td>HVAC ducting repair and sealing (above dietary drop ceiling)</td>
+            <td>Maintenance Staff / Contractor</td>
+            <td><span class="badge-active">IN PROGRESS</span></td>
+          </tr>
+          <tr class="active">
+            <td>Perimeter tree trimming</td>
+            <td>Maintenance Staff / Contractor</td>
+            <td><span class="badge-active">IN PROGRESS</span></td>
+          </tr>
+          <tr>
+            <td>Exterior vegetation and ground-level harborage management</td>
+            <td>Maintenance Staff</td>
+            <td>Ongoing — continued attention required</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h3>Program Schedule and Billing Summary</h3>
+      <p>With the substantial and continued decline in active rodent activity documented through Week 3, Pest Pro will maintain the three-times-per-week service frequency for Week 4. A formal assessment will be conducted at the close of Week 4 to determine whether the program has achieved the threshold required to transition to a monthly general pest service schedule or whether additional targeted visits are warranted.</p>
+
+      <table class="schedule-table">
+        <thead>
+          <tr><th>Week</th><th>Service Period</th><th>Frequency</th><th>Visits</th><th>Invoice Amount</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr class="completed">
+            <td><strong>Week 1</strong></td>
+            <td>Mar 13–19, 2026</td>
+            <td>Daily service (7 days)</td>
+            <td>7 &times; $180</td>
+            <td><strong>$2,360.00</strong></td>
+            <td><span class="badge">COMPLETED</span></td>
+          </tr>
+          <tr class="completed">
+            <td><strong>Week 2</strong></td>
+            <td>Mar 20–26, 2026</td>
+            <td>Every other day (4 visits)</td>
+            <td>4 &times; $180</td>
+            <td><strong>$720.00</strong></td>
+            <td><span class="badge">COMPLETED</span></td>
+          </tr>
+          <tr class="completed">
+            <td><strong>Week 3</strong></td>
+            <td>Mar 27–Apr 2, 2026</td>
+            <td>Three times per week</td>
+            <td>3 &times; $180</td>
+            <td><strong>$540.00</strong></td>
+            <td><span class="badge">COMPLETED</span></td>
+          </tr>
+          <tr class="active">
+            <td><strong>Week 4</strong></td>
+            <td>Apr 3–9, 2026</td>
+            <td>Three times per week</td>
+            <td>3 &times; $180</td>
+            <td><strong>$540.00</strong></td>
+            <td><span class="badge-active">IN PROGRESS</span></td>
+          </tr>
+          <tr>
+            <td><strong>Weeks 5–6</strong></td>
+            <td>Apr 10–23, 2026</td>
+            <td>To be determined upon completion of Week 4</td>
+            <td>TBD</td>
+            <td><strong>TBD</strong></td>
+            <td>Pending</td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="4"><strong>Confirmed Program Total — Weeks 1–3 (Invoiced)</strong></td>
+            <td><strong>$3,620.00*</strong></td>
+            <td></td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="4"><strong>Confirmed Program Total — Weeks 1–4</strong></td>
+            <td><strong>$4,160.00*</strong></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.73rem;color:#888;font-style:italic;">*All invoices are subject to applicable Orange County, Florida sales tax. The per-visit rate is $180.00 throughout the duration of this program. Week 5 service frequency and scope will be determined in writing upon completion of Week 4 and a formal end-of-program assessment.</p>
+    </div>
+
+    <div class="section">
+      <h3>Week 3 Photo Documentation</h3>
+      <p>The following photographs document the roof penetration point sealing completed by maintenance staff during Week 3, as provided to Pest Pro. These images confirm that identified exterior access points have been addressed and serve as part of the official program record.</p>
+
+      <div class="photo-grid">
+        <div class="photo-item">
+          <div class="photo-placeholder">[ Photo 1 — Roof Penetration: Sealed ]<br/>Insert client-provided photo here</div>
+          <div class="photo-caption"><strong>Photo 1 — Roof Penetration Point: Sealed.</strong> Maintenance staff completed the sealing of identified roof penetration points during Week 3. Closure of these exterior access points is a critical component of the long-term exclusion strategy for this facility.</div>
+        </div>
+        <div class="photo-item">
+          <div class="photo-placeholder">[ Photo 2 — Roof Penetration: Sealed ]<br/>Insert client-provided photo here</div>
+          <div class="photo-caption"><strong>Photo 2 — Roof Penetration Point: Sealed.</strong> Additional roof penetration point documented as sealed. The completion of exterior exclusion work in coordination with ongoing interior treatment represents a significant milestone in the eradication program.</div>
+        </div>
+        <div class="photo-item">
+          <div class="photo-placeholder">[ Photo 3 — Additional Documentation ]<br/>Insert client-provided photo here</div>
+          <div class="photo-caption"><strong>Photo 3 — Roof Exclusion Work: Detail.</strong> Close-up documentation of sealing materials and application quality at roof penetration points. Maintenance staff coordination on structural remediation has been a key factor in the program's effectiveness to date.</div>
+        </div>
+      </div>
+
+      <p style="font-size:0.73rem;color:#888;font-style:italic;">Photos provided by Excelsior maintenance staff and incorporated into this report as part of the official program documentation record. Additional photographs may be appended upon request.</p>
+    </div>
+
+    <div class="section">
+      <h3>Looking Ahead — Week 4</h3>
+      <p>Week 4 service visits are currently underway on a three-times-per-week schedule beginning April 3, 2026. Pest Pro personnel will continue to focus on the dietary kitchen and all associated areas, above-ceiling void spaces, mechanical rooms, and the building perimeter. All monitoring devices will be checked, serviced, and rebaited at each visit.</p>
+      <p>At the conclusion of Week 4, Pest Pro will conduct a formal end-of-program assessment to evaluate the current state of the infestation, the completeness of structural remediation, and the appropriate path forward. A Week 4 progress report will be issued at that time and will include a recommendation regarding continued service, transition to general pest maintenance, or both.</p>
+      <p>The measurable decline in active rodent population and the ongoing completion of critical structural work are strong indicators that this program is achieving its intended outcome. Pest Pro remains fully committed to this facility and to delivering a complete and lasting resolution. We commend the maintenance team and staff at the Rehabilitation Center of Orlando for their continued cooperation and diligence throughout this process.</p>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">PEST PRO, LLC · (407) 922-2276 · info@PestProLLC.com</div>
+    <div class="footer-right">
+      Report No. PP-2026-RCO-W3 · Issued April 4, 2026<br/>
+      Rehabilitation Center of Orlando — Rodent Eradication Program
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

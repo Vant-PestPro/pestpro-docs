@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weeks 5 &amp; 6 Final Monitoring Report — Rehabilitation Center of Orlando</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:#f0f0f0;padding:1.5rem;}
+    @media print{
+      body{background:white;padding:0;margin:0;font-size:11pt;}
+      .no-print{display:none!important;}
+      .doc{box-shadow:none!important;}
+      h3{page-break-after:avoid;page-break-inside:avoid;}
+      p{page-break-inside:avoid;orphans:3;widows:3;}
+      .section{page-break-inside:avoid;}
+      .highlight-box,.success-box,.warning-box,.final-box{page-break-inside:avoid;}
+      .schedule-table{page-break-inside:avoid;}
+      .client-grid{page-break-inside:avoid;}
+      ul{page-break-inside:avoid;}
+      li{page-break-inside:avoid;}
+      .header,.doc-title-bar,.client-grid{page-break-inside:avoid;page-break-after:avoid;}
+      .footer{page-break-inside:avoid;}
+    }
+    .print-bar{max-width:820px;margin:0 auto 1rem;text-align:right;}
+    .print-btn{background:#1a2557;color:white;border:none;padding:0.65rem 1.6rem;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:3px;}
+    .doc{background:white;max-width:820px;margin:0 auto;box-shadow:0 4px 20px rgba(0,0,0,0.12);}
+    .header{padding:1.8rem 2.5rem 1.2rem;border-bottom:3px solid #1a2557;}
+    .header-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1rem;}
+    .logo{height:120px;width:auto;}
+    .company-block p{font-size:0.75rem;color:#555;line-height:1.7;margin-top:0.3rem;}
+    .doc-info{text-align:right;font-size:0.75rem;color:#555;line-height:1.8;}
+    .doc-info strong{color:#1a2557;display:block;font-size:0.88rem;font-weight:800;}
+    .gold-bar{height:3px;background:linear-gradient(90deg,#FFB800,#e0a200,#FFB800);}
+    .doc-title-bar{background:#1a2557;color:white;padding:1rem 2.5rem;}
+    .doc-title-bar h1{font-size:1rem;font-weight:700;letter-spacing:0.04em;}
+    .doc-title-bar .sub{font-size:0.75rem;opacity:0.75;margin-top:0.2rem;}
+    .client-grid{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #e5e7eb;}
+    .client-cell{padding:0.8rem 2.5rem;border-right:1px solid #e5e7eb;}
+    .client-cell:nth-child(even){border-right:none;}
+    .client-cell:nth-child(3),.client-cell:nth-child(4){border-top:1px solid #e5e7eb;}
+    .client-cell label{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#999;display:block;margin-bottom:0.2rem;}
+    .client-cell p{font-size:0.82rem;color:#1a2557;font-weight:600;}
+    .content{padding:1.8rem 2.5rem 2rem;}
+    h3{font-size:0.8rem;font-weight:800;color:#1a2557;text-transform:uppercase;letter-spacing:0.08em;margin:1.8rem 0 0.6rem;padding-bottom:0.4rem;border-bottom:2px solid #FFB800;}
+    h3:first-child{margin-top:0;}
+    p{font-size:0.82rem;color:#333;line-height:1.8;margin-bottom:0.7rem;}
+    ul{padding-left:1.3rem;margin-bottom:0.8rem;}
+    li{font-size:0.82rem;color:#333;line-height:1.8;margin-bottom:0.1rem;}
+    strong{color:#1a2557;}
+    .highlight-box{background:#f0f3fa;border-left:4px solid #1a2557;padding:0.9rem 1.2rem;margin:0.8rem 0;font-size:0.82rem;color:#1a2557;line-height:1.8;}
+    .success-box{background:#f0f8f0;border-left:4px solid #2d7a3a;padding:0.9rem 1.2rem;margin:0.8rem 0;font-size:0.82rem;color:#1a2557;line-height:1.8;}
+    .final-box{background:#f0f8f0;border:2px solid #2d7a3a;border-radius:4px;padding:1.1rem 1.4rem;margin:0.8rem 0;font-size:0.82rem;color:#1a2557;line-height:1.8;}
+    .schedule-table{width:100%;border-collapse:collapse;margin:0.8rem 0;font-size:0.79rem;}
+    .schedule-table th{background:#1a2557;color:white;padding:0.5rem 0.8rem;text-align:left;font-weight:600;font-size:0.72rem;letter-spacing:0.04em;}
+    .schedule-table td{padding:0.5rem 0.8rem;border-bottom:1px solid #e5e7eb;color:#333;vertical-align:top;line-height:1.5;}
+    .schedule-table tr:last-child td{border-bottom:none;}
+    .schedule-table tr.total-row td{font-weight:700;color:#1a2557;background:#f8f9fc;border-top:2px solid #1a2557;}
+    .schedule-table tr.completed td{background:#f0f8f0;}
+    .schedule-table tr.active td{background:#fffbf0;}
+    .badge{display:inline-block;background:#2d7a3a;color:white;font-size:0.65rem;font-weight:700;padding:0.1rem 0.5rem;border-radius:2px;letter-spacing:0.05em;}
+    .badge-final{display:inline-block;background:#1a2557;color:white;font-size:0.65rem;font-weight:700;padding:0.1rem 0.5rem;border-radius:2px;letter-spacing:0.05em;}
+    .footer{border-top:3px solid #1a2557;padding:0.8rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;}
+    .footer-left{font-size:0.72rem;font-weight:700;color:#1a2557;letter-spacing:0.05em;}
+    .footer-right{font-size:0.65rem;color:#888;text-align:right;line-height:1.6;}
+    @media(max-width:600px){
+      .client-grid{grid-template-columns:1fr;}
+      .client-cell:nth-child(even){border-right:none;border-left:none;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="print-bar no-print">
+  <button class="print-btn" onclick="window.print()">&#8595; Save as PDF / Print</button>
+</div>
+
+<div class="doc">
+
+  <div class="header">
+    <div class="header-top">
+      <div>
+        <img src="https://vant-pestpro.github.io/pestpro-docs/photos/logo-pestpro.jpg" alt="Pest Pro LLC" class="logo"/>
+        <p>3211 Vineland Road, Suite 107 &middot; Kissimmee, FL 34746<br/>
+        Office: (407) 922-2276 &middot; info@PestProLLC.com<br/>
+        Licensed &amp; Insured &middot; State of Florida<br/><em>"Our 40th Year"</em></p>
+      </div>
+      <div class="doc-info">
+        <strong>WEEKS 5 &amp; 6 FINAL MONITORING REPORT</strong>
+        Report No.: PP-2026-RCO-W56<br/>
+        Date Issued: April 27, 2026<br/>
+        Report Period: April 10 &ndash; April 24, 2026<br/>
+        Service Type: Rodent Eradication Program &mdash; Final Monitoring Phase
+      </div>
+    </div>
+    <div class="gold-bar"></div>
+  </div>
+
+  <div class="doc-title-bar">
+    <h1>RODENT ERADICATION PROGRAM: WEEKS 5 &amp; 6 FINAL MONITORING REPORT</h1>
+    <div class="sub">Rehabilitation Center of Orlando &middot; Managed by Excelsior Care Group</div>
+  </div>
+
+  <div class="client-grid">
+    <div class="client-cell"><label>Facility Name</label><p>Rehabilitation Center of Orlando</p></div>
+    <div class="client-cell"><label>Service Address</label><p>9311 S. Orange Blossom Trail, Orlando, FL 32837</p></div>
+    <div class="client-cell"><label>Management Group</label><p>Excelsior Care Group</p></div>
+    <div class="client-cell"><label>Site Contact</label><p>Thomas, Regional Maintenance Director<br/>George, Chief Engineer</p></div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <h3>Executive Summary</h3>
+      <p>This report covers Weeks 5 and 6 of the Rodent Eradication Program at the Rehabilitation Center of Orlando, representing the final monitoring phase of the program. The monitoring period concluded on April 24, 2026.</p>
+      <div class="final-box">
+        <strong>Program Status: Complete. All Clear.</strong> Throughout the entirety of the Weeks 5 and 6 monitoring period, there were no reports, no sightings, and no evidence of any rodent activity anywhere within the facility. This outcome is consistent with the trajectory established during the active eradication phase and confirms that the program has achieved its objective. The Rodent Eradication Program is now formally concluded, and ongoing vigilance will be maintained as an integrated component of the regular scheduled General Pest Health (GHP) service.
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Weeks 5 &amp; 6 Monitoring Activities and Findings</h3>
+      <p>As outlined in the Week 4 Final Report, Weeks 5 and 6 transitioned from active eradication to an elevated monitoring posture, fully integrated within the regular weekly General Pest Health (GHP) service schedule. All previously established monitoring stations and bait stations were inspected and serviced at each visit during this period.</p>
+      <ul>
+        <li><strong>No Rodent Activity Detected:</strong> Pest Pro service personnel conducted thorough inspections of all previously active and high-risk areas throughout the facility during Weeks 5 and 6. At no point during this monitoring period was any evidence of rodent activity identified. No sightings, no audible signs of movement, and no physical evidence of activity were reported by facility staff, maintenance personnel, or Pest Pro technicians.</li>
+        <li><strong>All Monitoring Stations Clear:</strong> All mechanical traps, glue boards, and bait stations placed throughout the facility were inspected at each service visit. No captures and no signs of activity were recorded at any station during this period.</li>
+        <li><strong>No Activity Reports from Staff or Management:</strong> No reports of rodent sightings or concerns were received from dietary staff, maintenance personnel, or facility management during the Weeks 5 and 6 monitoring period.</li>
+      </ul>
+      <div class="success-box">
+        The results documented during Weeks 5 and 6 represent the strongest confirmation of program success to date. Following a sustained period of zero activity across all areas of the facility, the Rodent Eradication Program has achieved a complete and verified resolution of the infestation that had been present at this property for over two years.
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Complete Program Summary: Weeks 1 Through 6</h3>
+      <p>The following table provides a consolidated summary of the full six-week program from initiation through the close of the final monitoring period.</p>
+
+      <table class="schedule-table">
+        <thead>
+          <tr><th>Week</th><th>Service Period</th><th>Phase</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr class="completed">
+            <td><strong>Week 1</strong></td>
+            <td>Mar 13&ndash;19, 2026</td>
+            <td>Active Eradication &mdash; Program initiation, high-volume interception</td>
+            <td><span class="badge">COMPLETE</span></td>
+          </tr>
+          <tr class="completed">
+            <td><strong>Week 2</strong></td>
+            <td>Mar 20&ndash;26, 2026</td>
+            <td>Active Eradication &mdash; Interior penetration sealing; significant activity reduction</td>
+            <td><span class="badge">COMPLETE</span></td>
+          </tr>
+          <tr class="completed">
+            <td><strong>Week 3</strong></td>
+            <td>Mar 27&ndash;Apr 2, 2026</td>
+            <td>Active Eradication &mdash; Roof penetrations sealed; IR cameras installed</td>
+            <td><span class="badge">COMPLETE</span></td>
+          </tr>
+          <tr class="completed">
+            <td><strong>Week 4</strong></td>
+            <td>Apr 3&ndash;9, 2026</td>
+            <td>Active Eradication &mdash; Final removal; IR cameras confirmed no ongoing activity</td>
+            <td><span class="badge">COMPLETE</span></td>
+          </tr>
+          <tr class="completed">
+            <td><strong>Weeks 5&ndash;6</strong></td>
+            <td>Apr 10&ndash;24, 2026</td>
+            <td>Final Monitoring &mdash; Zero activity. No sightings, no evidence, no reports.</td>
+            <td><span class="badge">COMPLETE</span></td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="3"><strong>Program Outcome</strong></td>
+            <td><strong><span class="badge">ALL CLEAR</span></strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h3>Ongoing Commitment</h3>
+      <p>With the Rodent Eradication Program now formally concluded, Pest Pro remains fully committed to maintaining the results achieved at the Rehabilitation Center of Orlando. Our team will continue to apply close and consistent attention to this property during the course of regularly scheduled services to ensure the situation remains under control.</p>
+      <p>All existing rodent bait stations and monitoring equipment on the property will continue to be inspected and maintained at every service visit as part of the ongoing General Pest Health (GHP) program. Any notable findings will be communicated to Thomas and George promptly.</p>
+      <div class="success-box">
+        <strong>Pest Pro thanks the Excelsior Care Group team for their partnership throughout this program.</strong> The cooperation, responsiveness, and professionalism demonstrated by the facility's management and maintenance staff were instrumental in achieving this outcome. We look forward to continuing to serve this property.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">PEST PRO, LLC | CONFIDENTIAL SERVICE REPORT</div>
+    <div class="footer-right">
+      Report No.: PP-2026-RCO-W56 &middot; Issued: April 27, 2026<br/>
+      Rehabilitation Center of Orlando &middot; 9311 S. Orange Blossom Trail, Orlando, FL 32837<br/>
+      Pest Pro, LLC &middot; (407) 922-2276 &middot; info@PestProLLC.com &middot; Licensed &amp; Insured &middot; State of Florida
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

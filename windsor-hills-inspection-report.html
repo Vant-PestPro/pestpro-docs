@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rodent Inspection Report — Windsor Hills Resort</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:#f0f0f0;padding:1.5rem;}
+    @media print{
+      body{background:white;padding:0;margin:0;font-size:11pt;}
+      .no-print{display:none!important;}
+      .doc{box-shadow:none!important;}
+      h3{page-break-after:avoid;page-break-inside:avoid;}
+      p{page-break-inside:avoid;orphans:3;widows:3;}
+      .section{page-break-inside:avoid;}
+      .highlight-box,.success-box,.warning-box{page-break-inside:avoid;}
+      .photo-item{page-break-inside:avoid;}
+      .photo-grid,.photo-grid-2{page-break-inside:avoid;}
+      .client-grid{page-break-inside:avoid;}
+      ul{page-break-inside:avoid;}
+      li{page-break-inside:avoid;}
+      .header,.doc-title-bar,.client-grid{page-break-inside:avoid;page-break-after:avoid;}
+      .footer{page-break-inside:avoid;}
+    }
+    .print-bar{max-width:820px;margin:0 auto 1rem;text-align:right;}
+    .print-btn{background:#1a2557;color:white;border:none;padding:0.65rem 1.6rem;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:3px;}
+    .doc{background:white;max-width:820px;margin:0 auto;box-shadow:0 4px 20px rgba(0,0,0,0.12);}
+    .header{padding:1.8rem 2.5rem 1.2rem;border-bottom:3px solid #1a2557;}
+    .header-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1rem;}
+    .logo{height:120px;width:auto;}
+    .company-block p{font-size:0.75rem;color:#555;line-height:1.7;margin-top:0.3rem;}
+    .doc-info{text-align:right;font-size:0.75rem;color:#555;line-height:1.8;}
+    .doc-info strong{color:#1a2557;display:block;font-size:0.88rem;font-weight:800;}
+    .gold-bar{height:3px;background:linear-gradient(90deg,#FFB800,#e0a200,#FFB800);}
+    .doc-title-bar{background:#1a2557;color:white;padding:1rem 2.5rem;}
+    .doc-title-bar h1{font-size:1rem;font-weight:700;letter-spacing:0.04em;}
+    .doc-title-bar .sub{font-size:0.75rem;opacity:0.75;margin-top:0.2rem;}
+    .client-grid{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #e5e7eb;}
+    .client-cell{padding:0.8rem 2.5rem;border-right:1px solid #e5e7eb;}
+    .client-cell:nth-child(even){border-right:none;}
+    .client-cell:nth-child(3),.client-cell:nth-child(4){border-top:1px solid #e5e7eb;}
+    .client-cell label{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#999;display:block;margin-bottom:0.2rem;}
+    .client-cell p{font-size:0.82rem;color:#1a2557;font-weight:600;}
+    .content{padding:1.8rem 2.5rem 2rem;}
+    h3{font-size:0.8rem;font-weight:800;color:#1a2557;text-transform:uppercase;letter-spacing:0.08em;margin:1.8rem 0 0.6rem;padding-bottom:0.4rem;border-bottom:2px solid #FFB800;}
+    h3:first-child{margin-top:0;}
+    p{font-size:0.82rem;color:#333;line-height:1.8;margin-bottom:0.7rem;}
+    ul{padding-left:1.3rem;margin-bottom:0.8rem;}
+    li{font-size:0.82rem;color:#333;line-height:1.8;margin-bottom:0.3rem;}
+    strong{color:#1a2557;}
+    .highlight-box{background:#f0f3fa;border-left:4px solid #1a2557;padding:0.9rem 1.2rem;margin:0.8rem 0;font-size:0.82rem;color:#1a2557;line-height:1.8;}
+    .success-box{background:#f0f8f0;border-left:4px solid #2d7a3a;padding:0.9rem 1.2rem;margin:0.8rem 0;font-size:0.82rem;color:#1a2557;line-height:1.8;}
+    .warning-box{background:#fffbf0;border-left:4px solid #e0a200;padding:0.9rem 1.2rem;margin:0.8rem 0;font-size:0.82rem;color:#1a2557;line-height:1.8;}
+    .photo-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin:1rem 0;}
+    .photo-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0;}
+    .photo-item{border:1px solid #e5e7eb;border-radius:3px;overflow:hidden;}
+    .photo-item img{width:100%;height:220px;object-fit:cover;display:block;}
+    .photo-item.tall img{height:300px;}
+    .photo-caption{padding:0.5rem 0.7rem;font-size:0.72rem;color:#555;line-height:1.5;background:#f8f9fc;border-top:1px solid #e5e7eb;}
+    .footer{border-top:3px solid #1a2557;padding:0.8rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;}
+    .footer-left{font-size:0.72rem;font-weight:700;color:#1a2557;letter-spacing:0.05em;}
+    .footer-right{font-size:0.65rem;color:#888;text-align:right;line-height:1.6;}
+    @media(max-width:600px){
+      .client-grid{grid-template-columns:1fr;}
+      .photo-grid,.photo-grid-2{grid-template-columns:1fr;}
+      .client-cell:nth-child(even){border-right:none;border-left:none;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="print-bar no-print">
+  <button class="print-btn" onclick="window.print()">&#8595; Save as PDF / Print</button>
+</div>
+
+<div class="doc">
+
+  <div class="header">
+    <div class="header-top">
+      <div>
+        <img src="https://vant-pestpro.github.io/pestpro-docs/photos/logo-pestpro.jpg" alt="Pest Pro LLC" class="logo"/>
+        <p>3211 Vineland Road, Suite 107 &middot; Kissimmee, FL 34746<br/>
+        Office: (407) 922-2276 &middot; info@PestProLLC.com<br/>
+        Licensed &amp; Insured &middot; State of Florida<br/><em>"Our 40th Year"</em></p>
+      </div>
+      <div class="doc-info">
+        <strong>INSPECTION REPORT</strong>
+        Report No.: PP-2026-WH-001<br/>
+        Date of Service: June 13, 2026<br/>
+        Service Window: 4:00 PM &ndash; 6:00 PM<br/>
+        Service Type: Rodent Inspection &amp; Initial Treatment
+      </div>
+    </div>
+    <div class="gold-bar"></div>
+  </div>
+
+  <div class="doc-title-bar">
+    <h1>RODENT INSPECTION REPORT &mdash; INITIAL ASSESSMENT &amp; TREATMENT</h1>
+    <div class="sub">Windsor Hills Resort &middot; 7809 Basnett Circle, Kissimmee, FL</div>
+  </div>
+
+  <div class="client-grid">
+    <div class="client-cell"><label>Property</label><p>Windsor Hills Resort</p></div>
+    <div class="client-cell"><label>Service Address</label><p>7809 Basnett Circle, Kissimmee, FL</p></div>
+    <div class="client-cell"><label>Property Contact</label><p>Anastasia Root<br/>Root Investment Properties</p></div>
+    <div class="client-cell"><label>Technician</label><p>Daniel Rumsey<br/>Pest Pro LLC</p></div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <h3>Reason for Service</h3>
+      <p>This inspection was requested same-day following a report of a rodent observed inside the BBQ grill in the outdoor kitchen area of the property. The guest reported opening the grill lid and seeing a rodent inside, which was likely feeding on food residue from a prior use. Her husband witnessed the rodent exit the grill and move in the direction of the pool area. Beyond this sighting, the guests did not report any additional evidence of activity inside the home.</p>
+      <p>Pest Pro responded on the same day the lead came in, with a 4:00 PM to 6:00 PM service window. The scope of the visit was to inspect the reported area, document any evidence of rodent activity, identify potential entry and harborage points, and place initial treatment as appropriate.</p>
+    </div>
+
+    <div class="section">
+      <h3>Inspection Summary</h3>
+      <div class="warning-box">
+        <strong>Active Rodent Activity Confirmed.</strong> The inspection identified multiple indicators of ongoing rodent presence, including a high volume of feces beneath the outdoor grill cabinetry, nesting material at a structural floor penetration, and two open wall penetrations providing direct access into the structure. This is not an isolated incident. The conditions observed are consistent with an established rodent presence that has been active for some time.
+      </div>
+      <p>The following areas were inspected during this visit: the outdoor kitchen and BBQ grill area, the surrounding screen enclosure, the exterior front of the structure, and the patio screen door entry. All findings are documented below with photo evidence.</p>
+    </div>
+
+    <div class="section">
+      <h3>Findings and Observations</h3>
+
+      <p><strong>1. Tree Branches in Contact with the Roofline (Exterior, Front of Structure)</strong></p>
+      <p>A large tree at the front of the property has branches growing directly into contact with the roofline and soffit. This is one of the most common ways rodents and other pests gain access to a structure. Branches that touch or overhang a roofline act as a natural bridge, allowing rodents to move from the tree canopy directly onto and into the building. Trimming these branches back so they no longer make contact with the structure is something we would recommend coordinating with a landscaper or tree service.</p>
+
+      <p><strong>2. Screen Door Gap (Patio Screen Enclosure)</strong></p>
+      <p>There is a visible gap along the bottom of the patio screen door sweep that is large enough to allow pests and small rodents to pass through. Normally this would be an easy fix with a new weather strip or door sweep. However, this particular door has a garden hose running through the gap, which is used to fill the pool, so a full seal is not practical without relocating the hose access point. We are noting this as a known limitation and flagging it as something to address when the hose routing can be changed.</p>
+
+      <p><strong>3. Rodent Feces Throughout the Outdoor Kitchen Area</strong></p>
+      <p>Rodent droppings were found scattered across the paver floor inside the screen enclosure, with the heaviest concentration located directly beneath the outdoor grill cabinetry. The volume and distribution of the droppings are consistent with ongoing, regular activity, not a single visit from a rodent passing through. This is where the guest's initial sighting occurred, and the evidence supports that rodents have been using this space for some time.</p>
+
+      <p><strong>4. Standing Water Beneath the Grill Cabinetry</strong></p>
+      <p>A container of standing water was found underneath the BBQ cabinetry. Standing water is a reliable attractant for rodents and other pests. Removing this and ensuring no water is allowed to accumulate in this area will help reduce the conditions that make the space attractive to wildlife.</p>
+
+      <p><strong>5. Floor and Wall Penetration with Nesting Material (Primary Entry Point)</strong></p>
+      <p>A gap was found at the base of the exterior wall where the paver floor and utility pipes meet. This opening appears to lead either into the structural wall cavity or beneath the foundation. Nesting material was found at and around this penetration, which tells us this is not just a travel corridor but an active harborage site. This is the most significant finding from this inspection and will need to be properly sealed by a contractor using appropriate rodent-exclusion materials.</p>
+
+      <p><strong>6. Second Wall Penetration with Exposed Wiring (Safety Concern)</strong></p>
+      <p>A second opening was found in the exterior stucco wall nearby. This penetration has exposed electrical wiring passing through it, and a wire nut that appears to have come loose was found on the ground below the opening. Beyond being a rodent entry point, this is an electrical safety concern that should be evaluated by a licensed electrician. We are flagging it here so it can be addressed alongside the pest-proofing work.</p>
+    </div>
+
+    <div class="section">
+      <h3>Photo Documentation</h3>
+
+      <div class="photo-grid-2">
+        <div class="photo-item">
+          <img src="https://vant-pestpro.github.io/pestpro-docs/photos/wh-tree-branches-wide.jpg" alt="Tree branches at front of structure"/>
+          <div class="photo-caption"><strong>Fig. 1</strong> &mdash; Tree branches in contact with the roofline at the front of the property. A common rodent bridge point onto the structure.</div>
+        </div>
+        <div class="photo-item">
+          <img src="https://vant-pestpro.github.io/pestpro-docs/photos/wh-tree-branches-close.jpg" alt="Tree branches close up at soffit"/>
+          <div class="photo-caption"><strong>Fig. 2</strong> &mdash; Close-up of branch contact at the soffit and gutter line. Branches are pressing directly against the structure.</div>
+        </div>
+      </div>
+
+      <div class="photo-grid-2">
+        <div class="photo-item">
+          <img src="https://vant-pestpro.github.io/pestpro-docs/photos/wh-outdoor-kitchen.jpg" alt="Outdoor kitchen BBQ area"/>
+          <div class="photo-caption"><strong>Fig. 3</strong> &mdash; The outdoor kitchen and BBQ area where the rodent was first observed by the guest. Primary area of activity.</div>
+        </div>
+        <div class="photo-item">
+          <img src="https://vant-pestpro.github.io/pestpro-docs/photos/wh-screen-door-gap.jpg" alt="Screen door gap with garden hose"/>
+          <div class="photo-caption"><strong>Fig. 4</strong> &mdash; Gap at the base of the patio screen door sweep. Garden hose runs through the opening to fill the pool, preventing a full seal.</div>
+        </div>
+      </div>
+
+      <div class="photo-grid-2">
+        <div class="photo-item">
+          <img src="https://vant-pestpro.github.io/pestpro-docs/photos/wh-feces-pavers.jpg" alt="Rodent feces on pavers"/>
+          <div class="photo-caption"><strong>Fig. 5</strong> &mdash; Rodent droppings scattered across the paver floor beneath the grill cabinetry. Volume and distribution indicate ongoing, regular activity.</div>
+        </div>
+        <div class="photo-item">
+          <img src="https://vant-pestpro.github.io/pestpro-docs/photos/wh-feces-closeup.jpg" alt="Close-up rodent feces"/>
+          <div class="photo-caption"><strong>Fig. 6</strong> &mdash; Close-up of rodent feces collected from beneath the BBQ cabinetry. Consistent with mouse activity.</div>
+        </div>
+      </div>
+
+      <div class="photo-grid-2">
+        <div class="photo-item">
+          <img src="https://vant-pestpro.github.io/pestpro-docs/photos/wh-under-cabinetry.jpg" alt="Under BBQ cabinetry with standing water"/>
+          <div class="photo-caption"><strong>Fig. 7</strong> &mdash; Under the grill cabinetry showing standing water, utility pipe penetrations, and the concentration of feces throughout the area.</div>
+        </div>
+        <div class="photo-item">
+          <img src="https://vant-pestpro.github.io/pestpro-docs/photos/wh-penetration-foil.jpg" alt="Floor wall penetration with nesting material"/>
+          <div class="photo-caption"><strong>Fig. 8</strong> &mdash; Penetration at the wall and floor junction where pavers meet utility pipes. Nesting material present. Leads into the wall cavity or beneath the foundation.</div>
+        </div>
+      </div>
+
+      <div class="photo-grid-2">
+        <div class="photo-item">
+          <img src="https://vant-pestpro.github.io/pestpro-docs/photos/wh-penetration-wiring.jpg" alt="Second wall penetration with exposed wiring and glue board"/>
+          <div class="photo-caption"><strong>Fig. 9</strong> &mdash; Second wall penetration with exposed wiring and a disconnected wire nut found on the ground. Glue board placed directly in the active rodent travel path along the wall.</div>
+        </div>
+        <div class="photo-item">
+          <img src="https://vant-pestpro.github.io/pestpro-docs/photos/wh-glue-board-2.jpg" alt="Second glue board placement"/>
+          <div class="photo-caption"><strong>Fig. 10</strong> &mdash; Additional glue board monitor placed along the wall in the secondary rodent runway. Both boards are positioned flush to the wall per proper rodent control placement protocol.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Treatment Performed</h3>
+      <p>Two professional-grade heavy-duty glue board monitors with rodent attractant applied were placed in the outdoor kitchen area during this visit. Glue board monitors were selected specifically because small children have access to this area. Snap traps, while effective, present a safety risk in that environment. The glue boards are positioned flush to the walls in the primary rodent travel corridors, directly adjacent to the areas where the heaviest fecal evidence was found.</p>
+      <p>Both monitors will need to be checked on follow-up. If activity is captured, boards will be replaced. If activity has slowed significantly, we can reassess the treatment plan at that time.</p>
+      <div class="success-box">
+        <strong>Guest Response:</strong> The guest was present during the inspection and expressed that she was satisfied with the response and the service provided.
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Our Recommendations</h3>
+
+      <p><strong>1. Seal the Penetration Points</strong></p>
+      <p>The two open penetrations beneath the grill cabinetry are the most important thing to address. Until those openings are properly sealed with rodent-exclusion materials, new rodents can continue to enter from outside. We recommend coordinating with a licensed contractor to close both gaps. We are also flagging the second penetration for an electrician to evaluate, given the exposed wiring found there. Additionally, we would suggest looking into a new door sweep or weather stripping for the patio screen door when the hose routing situation allows for it.</p>
+
+      <p><strong>2. Tamper-Resistant Bait Stations (Perimeter)</strong></p>
+      <p>We recommend installing two to four tamper-resistant rodent bait stations along the exterior perimeter of the property at $25.00 per station. These are designed to be safe in guest-accessible outdoor spaces and provide an ongoing layer of perimeter defense to reduce the rodent pressure entering from outside.</p>
+
+      <p><strong>3. Follow-Up Service</strong></p>
+      <p>We recommend scheduling a follow-up visit on or before June 19, 2026. This gives us a chance to check the monitors placed today, assess whether the activity has changed, and make any adjustments to the treatment plan. Ideally this visit happens after the penetrations have been sealed, so we can evaluate how effective the exclusion work has been.</p>
+
+      <p><strong>4. Ongoing Bi-Monthly Protection Plan</strong></p>
+      <p>For properties like this one, where guests are rotating in and out and the outdoor living areas create natural attractants, we find that staying ahead of pest pressure is always easier than responding to it after the fact. Our bi-monthly General Household Pest (GHP) Protection Plan is $79.00 per service visit and covers full pest control maintenance for Ants, Roaches, Palmettos, Water Bugs, Spiders, Silverfish, and Earwigs, along with routine rodent monitoring for both the interior and exterior perimeters of the property.</p>
+      <p>One thing worth knowing: if you enroll in this plan, the follow-up visits we are recommending for this property right now would be included at no additional charge. Essentially, the plan covers everything going forward under one flat rate, including future property inspections and service visits. You get the ongoing protection, the peace of mind, and the follow-through, without having to think about it between visits.</p>
+      <div class="highlight-box">
+        No contracts required. We believe in earning your continued business with every visit.
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Service Summary</h3>
+      <table style="width:100%;border-collapse:collapse;font-size:0.82rem;margin-top:0.5rem;">
+        <tr style="background:#1a2557;color:white;">
+          <th style="padding:0.5rem 0.8rem;text-align:left;font-weight:600;">Item</th>
+          <th style="padding:0.5rem 0.8rem;text-align:right;font-weight:600;">Amount</th>
+        </tr>
+        <tr style="border-bottom:1px solid #e5e7eb;">
+          <td style="padding:0.5rem 0.8rem;color:#333;">Initial Inspection, Assessment &amp; Trap Placement</td>
+          <td style="padding:0.5rem 0.8rem;text-align:right;color:#333;">$120.00</td>
+        </tr>
+        <tr style="background:#f8f9fc;border-top:2px solid #1a2557;">
+          <td style="padding:0.5rem 0.8rem;font-weight:700;color:#1a2557;">Total Charged</td>
+          <td style="padding:0.5rem 0.8rem;text-align:right;font-weight:700;color:#1a2557;">$120.00</td>
+        </tr>
+        <tr>
+          <td style="padding:0.5rem 0.8rem;font-size:0.75rem;color:#888;">Payment Method</td>
+          <td style="padding:0.5rem 0.8rem;text-align:right;font-size:0.75rem;color:#888;">Zelle</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">PEST PRO LLC &middot; CONFIDENTIAL SERVICE REPORT</div>
+    <div class="footer-right">
+      Report No. PP-2026-WH-001 &middot; Issued June 13, 2026<br/>
+      (407) 922-2276 &middot; info@PestProLLC.com &middot; PestProLLC.com
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

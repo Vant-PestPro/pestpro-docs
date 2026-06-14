@@ -12,33 +12,19 @@
       body{background:white;padding:0;margin:0;font-size:10pt;}
       .no-print{display:none!important;}
       .doc{box-shadow:none!important;}
-      /* Header block stays together */
-      .header{break-inside:avoid;page-break-inside:avoid;}
-      .doc-title-bar{break-inside:avoid;page-break-inside:avoid;}
-      .client-grid{break-inside:avoid;page-break-inside:avoid;}
-      .footer{break-inside:avoid;page-break-inside:avoid;}
+      /* Core document blocks stay together */
+      .header,.doc-title-bar,.client-grid,.footer{break-inside:avoid;page-break-inside:avoid;}
       /* Callout boxes stay together */
       .highlight-box,.success-box,.warning-box{break-inside:avoid;page-break-inside:avoid;}
-      /* PHOTOS: single column in print so each card flows naturally without grid forcing */
-      .photo-grid,.photo-grid-2{
-        display:block !important;
-      }
-      .photo-item{
-        display:block !important;
-        width:100% !important;
-        margin-bottom:0.75rem;
-        break-inside:avoid;
-        page-break-inside:avoid;
-      }
-      .photo-item img{
-        width:100% !important;
-        height:auto !important;
-        max-height:280px;
-        object-fit:contain;
-      }
-      /* Headings stay with following content */
+      /* Each finding and recommendation item stays together as a unit */
+      .finding,.rec-item{break-inside:avoid;page-break-inside:avoid;}
+      /* Section headings never orphaned from their content */
       h3{break-after:avoid;page-break-after:avoid;}
-      p{orphans:2;widows:2;}
+      /* PHOTOS: single column, each card stays together */
+      .photo-grid,.photo-grid-2{display:block !important;}
+      .photo-item{display:block !important;width:100% !important;margin-bottom:0.75rem;break-inside:avoid;page-break-inside:avoid;}
+      .photo-item img{width:100% !important;height:auto !important;max-height:260px;object-fit:cover;}
+      p{orphans:3;widows:3;}
       li{orphans:2;widows:2;}
     }
     .print-bar{max-width:820px;margin:0 auto 1rem;text-align:right;}
@@ -144,23 +130,35 @@
     <div class="section">
       <h3>Findings and Observations</h3>
 
-      <p><strong>1. Tree Branches in Contact with the Roofline (Exterior, Front of Structure)</strong></p>
-      <p>A large tree at the front of the property has branches growing directly into contact with the roofline and soffit. This is one of the most common ways rodents and other pests gain access to a structure. Branches that touch or overhang a roofline act as a natural bridge, allowing rodents to move from the tree canopy directly onto and into the building. Trimming these branches back so they no longer make contact with the structure is something we would recommend coordinating with a landscaper or tree service.</p>
+      <div class="finding">
+        <p><strong>1. Tree Branches in Contact with the Roofline (Exterior, Front of Structure)</strong></p>
+        <p>A large tree at the front of the property has branches growing directly into contact with the roofline and soffit. This is one of the most common ways rodents and other pests gain access to a structure. Branches that touch or overhang a roofline act as a natural bridge, allowing rodents to move from the tree canopy directly onto and into the building. Trimming these branches back so they no longer make contact with the structure is something we would recommend coordinating with a landscaper or tree service.</p>
+      </div>
 
-      <p><strong>2. Screen Door Gap (Patio Screen Enclosure)</strong></p>
-      <p>There is a visible gap along the bottom of the patio screen door sweep that is large enough to allow pests and small rodents to pass through. Normally this would be an easy fix with a new weather strip or door sweep. However, this particular door has a garden hose running through the gap, which is used to fill the pool, so a full seal is not practical without relocating the hose access point. We are noting this as a known limitation and flagging it as something to address when the hose routing can be changed.</p>
+      <div class="finding">
+        <p><strong>2. Screen Door Gap (Patio Screen Enclosure)</strong></p>
+        <p>There is a visible gap along the bottom of the patio screen door sweep that is large enough to allow pests and small rodents to pass through. Normally this would be an easy fix with a new weather strip or door sweep. However, this particular door has a garden hose running through the gap, which is used to fill the pool, so a full seal is not practical without relocating the hose access point. We are noting this as a known limitation and flagging it as something to address when the hose routing can be changed.</p>
+      </div>
 
-      <p><strong>3. Rodent Feces Isolated to the Grill Cabinetry Area</strong></p>
-      <p>Rodent droppings were found isolated specifically to the area beneath the outdoor grill cabinetry. No droppings were observed elsewhere in the screen enclosure. The volume and distribution concentrated in that one location are consistent with ongoing, regular activity in and around the grill structure, not a rodent simply passing through. Based on the size and shape of the droppings observed, the activity is more consistent with rat rather than mouse. This is where the guest's initial sighting occurred, and the evidence supports that rodents have been actively using this space for some time.</p>
+      <div class="finding">
+        <p><strong>3. Rodent Feces Isolated to the Grill Cabinetry Area</strong></p>
+        <p>Rodent droppings were found isolated specifically to the area beneath the outdoor grill cabinetry. No droppings were observed elsewhere in the screen enclosure. The volume and distribution concentrated in that one location are consistent with ongoing, regular activity in and around the grill structure, not a rodent simply passing through. Based on the size and shape of the droppings observed, the activity is more consistent with rat rather than mouse. This is where the guest's initial sighting occurred, and the evidence supports that rodents have been actively using this space for some time.</p>
+      </div>
 
-      <p><strong>4. Standing Water Beneath the Grill Cabinetry</strong></p>
-      <p>A container of standing water was found underneath the BBQ cabinetry. Standing water is a reliable attractant for rodents and other pests. Removing this and ensuring no water is allowed to accumulate in this area will help reduce the conditions that make the space attractive to wildlife.</p>
+      <div class="finding">
+        <p><strong>4. Standing Water Beneath the Grill Cabinetry</strong></p>
+        <p>A container of standing water was found underneath the BBQ cabinetry. Standing water is a reliable attractant for rodents and other pests. Removing this and ensuring no water is allowed to accumulate in this area will help reduce the conditions that make the space attractive to wildlife.</p>
+      </div>
 
-      <p><strong>5. Floor and Wall Penetration with Nesting Material (Primary Entry Point)</strong></p>
-      <p>A gap was found at the base of the exterior wall where the paver floor and utility pipes meet. This opening appears to connect to the structural wall cavity or extend beneath the foundation. Nesting material was found at and around this penetration, which tells us this is not just a travel corridor but an active harborage site. This is the most significant finding from this inspection and will need to be properly sealed by a contractor using appropriate rodent-exclusion materials.</p>
+      <div class="finding">
+        <p><strong>5. Floor and Wall Penetration with Nesting Material (Primary Entry Point)</strong></p>
+        <p>A gap was found at the base of the exterior wall where the paver floor and utility pipes meet. This opening appears to connect to the structural wall cavity or extend beneath the foundation. Nesting material was found at and around this penetration, which tells us this is not just a travel corridor but an active harborage site. This is the most significant finding from this inspection and will need to be properly sealed by a contractor using appropriate rodent-exclusion materials.</p>
+      </div>
 
-      <p><strong>6. Second Wall Penetration with Exposed Wiring (Safety Concern)</strong></p>
-      <p>A second opening was found in the exterior stucco wall nearby. This penetration has exposed electrical wiring passing through it, and a wire nut that appears to have come loose was found on the ground below the opening. Beyond being a rodent entry point, this is an electrical safety concern that should be evaluated by a licensed electrician. We are flagging it here so it can be addressed alongside the pest-proofing work.</p>
+      <div class="finding">
+        <p><strong>6. Second Wall Penetration with Exposed Wiring (Safety Concern)</strong></p>
+        <p>A second opening was found in the exterior stucco wall nearby. This penetration has exposed electrical wiring passing through it, and a wire nut that appears to have come loose was found on the ground below the opening. Beyond being a rodent entry point, this is an electrical safety concern that should be evaluated by a licensed electrician. We are flagging it here so it can be addressed alongside the pest-proofing work.</p>
+      </div>
 
       <div class="success-box">
         <strong>Full Perimeter Inspection Completed.</strong> The entire exterior perimeter of the structure was walked and inspected during this visit. With the exception of the two penetrations documented above, no additional visible entry points or structural gaps were identified.
@@ -238,17 +236,25 @@
     <div class="section">
       <h3>Our Recommendations</h3>
 
-      <p><strong>1. Seal the Penetration Points</strong></p>
-      <p>The two open penetrations beneath the grill cabinetry are the most important thing to address. Until those openings are properly sealed with rodent-exclusion materials, new rodents can continue to enter from outside. We recommend coordinating with a licensed contractor to close both gaps. We are also flagging the second penetration for an electrician to evaluate, given the exposed wiring found there. Additionally, we would suggest looking into a new door sweep or weather stripping for the patio screen door when the hose routing situation allows for it.</p>
+      <div class="rec-item">
+        <p><strong>1. Seal the Penetration Points</strong></p>
+        <p>The two open penetrations beneath the grill cabinetry are the most important thing to address. Until those openings are properly sealed with rodent-exclusion materials, new rodents can continue to enter from outside. We recommend coordinating with a licensed contractor to close both gaps. We are also flagging the second penetration for an electrician to evaluate, given the exposed wiring found there. Additionally, we would suggest looking into a new door sweep or weather stripping for the patio screen door when the hose routing situation allows for it.</p>
+      </div>
 
-      <p><strong>2. Tamper-Resistant Bait Stations (Perimeter)</strong></p>
-      <p>We recommend installing two to four tamper-resistant rodent bait stations along the exterior perimeter of the property at $25.00 per station. These are designed to be safe in guest-accessible outdoor spaces and provide an ongoing layer of perimeter defense to reduce the rodent pressure entering from outside.</p>
+      <div class="rec-item">
+        <p><strong>2. Tamper-Resistant Bait Stations (Perimeter)</strong></p>
+        <p>We recommend installing two to four tamper-resistant rodent bait stations along the exterior perimeter of the property at $25.00 per station. These are designed to be safe in guest-accessible outdoor spaces and provide an ongoing layer of perimeter defense to reduce the rodent pressure entering from outside.</p>
+      </div>
 
-      <p><strong>3. Follow-Up Service</strong></p>
-      <p>We recommend scheduling a follow-up visit on or before June 19, 2026. This gives us a chance to check the monitors placed today, assess whether the activity has changed, and make any adjustments to the treatment plan. Ideally this visit happens after the penetrations have been sealed, so we can evaluate how effective the exclusion work has been.</p>
+      <div class="rec-item">
+        <p><strong>3. Follow-Up Service</strong></p>
+        <p>We recommend scheduling a follow-up visit on or before June 19, 2026. This gives us a chance to check the monitors placed today, assess whether the activity has changed, and make any adjustments to the treatment plan. Ideally this visit happens after the penetrations have been sealed, so we can evaluate how effective the exclusion work has been.</p>
+      </div>
 
-      <p><strong>4. Ongoing Bi-Monthly Protection Plan</strong></p>
-      <p>For properties like this one, where guests are rotating in and out and the outdoor living areas create natural attractants, we find that staying ahead of pest pressure is always easier than responding to it after the fact. Our bi-monthly General Household Pest (GHP) Protection Plan is $79.00 per service visit (every two months) and covers full pest control maintenance for Ants, Roaches, Palmettos, Water Bugs, Spiders, Silverfish, and Earwigs, along with routine rodent monitoring for both the interior and exterior perimeters of the property. If a covered pest concern comes up between scheduled visits, we come back out at no additional charge.</p>
+      <div class="rec-item">
+        <p><strong>4. Ongoing Bi-Monthly Protection Plan</strong></p>
+        <p>For properties like this one, where guests are rotating in and out and the outdoor living areas create natural attractants, we find that staying ahead of pest pressure is always easier than responding to it after the fact. Our bi-monthly General Household Pest (GHP) Protection Plan is $79.00 per service visit (every two months) and covers full pest control maintenance for Ants, Roaches, Palmettos, Water Bugs, Spiders, Silverfish, and Earwigs, along with routine rodent monitoring for both the interior and exterior perimeters of the property. If a covered pest concern comes up between scheduled visits, we come back out at no additional charge.</p>
+      </div>
       <p>One thing worth knowing: if you enroll in this plan, the follow-up visits we are recommending for this property right now would be included at no additional charge. The plan covers everything going forward under one flat rate, including future property inspections and service visits. You get the ongoing protection, the peace of mind, and the follow-through, all without having to think about it between visits.</p>
       <div class="highlight-box">
         No contracts required. We believe in earning your continued business with every visit.

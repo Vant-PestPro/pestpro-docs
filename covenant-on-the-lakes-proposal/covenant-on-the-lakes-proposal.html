@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rodent Eradication Program Proposal — Covenant On The Lakes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:#f0f0f0;padding:1.5rem;}
+    @media print{
+      body{background:white;padding:0;margin:0;font-size:11pt;}
+      .no-print{display:none!important;}
+      .doc{box-shadow:none!important;}
+      h3{page-break-after:avoid;page-break-inside:avoid;}
+      p{page-break-inside:avoid;orphans:3;widows:3;}
+      .section{page-break-inside:avoid;}
+      .highlight-box,.warning-box,.success-box{page-break-inside:avoid;}
+      .photo-item{page-break-inside:avoid;}
+      .photo-grid{page-break-inside:avoid;}
+      .schedule-table{page-break-inside:avoid;}
+      .sig-section{page-break-inside:avoid;}
+      .client-grid{page-break-inside:avoid;}
+      ul{page-break-inside:avoid;}
+      li{page-break-inside:avoid;}
+      .header,.doc-title-bar,.client-grid{page-break-inside:avoid;page-break-after:avoid;}
+      .footer{page-break-inside:avoid;}
+      .map-full img{max-height:380px;}
+    }
+    .print-bar{max-width:820px;margin:0 auto 1rem;text-align:right;}
+    .print-btn{background:#1a2557;color:white;border:none;padding:0.65rem 1.6rem;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:3px;}
+    .doc{background:white;max-width:820px;margin:0 auto;box-shadow:0 4px 20px rgba(0,0,0,0.12);}
+
+    /* HEADER */
+    .header{padding:1.8rem 2.5rem 1.2rem;border-bottom:3px solid #1a2557;}
+    .header-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1rem;}
+    .logo{height:60px;width:auto;}
+    .company-block p{font-size:0.75rem;color:#555;line-height:1.7;margin-top:0.3rem;}
+    .doc-info{text-align:right;font-size:0.75rem;color:#555;line-height:1.8;}
+    .doc-info strong{color:#1a2557;display:block;font-size:0.88rem;font-weight:800;}
+    .gold-bar{height:3px;background:linear-gradient(90deg,#FFB800,#e0a200,#FFB800);}
+    .doc-title-bar{background:#1a2557;color:white;padding:1rem 2.5rem;}
+    .doc-title-bar h1{font-size:1rem;font-weight:700;letter-spacing:0.04em;}
+    .doc-title-bar .sub{font-size:0.75rem;opacity:0.75;margin-top:0.2rem;}
+
+    /* CLIENT INFO */
+    .client-grid{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #e5e7eb;}
+    .client-cell{padding:0.8rem 2.5rem;border-right:1px solid #e5e7eb;}
+    .client-cell:nth-child(even){border-right:none;}
+    .client-cell:nth-child(3),.client-cell:nth-child(4),.client-cell:nth-child(5),.client-cell:nth-child(6){border-top:1px solid #e5e7eb;}
+    .client-cell label{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#999;display:block;margin-bottom:0.2rem;}
+    .client-cell p{font-size:0.82rem;color:#1a2557;font-weight:600;}
+
+    /* CONTENT */
+    .content{padding:1.8rem 2.5rem 2rem;}
+    h3{font-size:0.8rem;font-weight:800;color:#1a2557;text-transform:uppercase;letter-spacing:0.08em;margin:1.8rem 0 0.6rem;padding-bottom:0.4rem;border-bottom:2px solid #FFB800;}
+    h3:first-child{margin-top:0;}
+    p{font-size:0.82rem;color:#333;line-height:1.8;margin-bottom:0.7rem;}
+    ul{padding-left:1.3rem;margin-bottom:0.8rem;}
+    li{font-size:0.82rem;color:#333;line-height:1.8;margin-bottom:0.1rem;}
+    strong{color:#1a2557;}
+
+    /* HIGHLIGHT BOXES */
+    .highlight-box{background:#f0f3fa;border-left:4px solid #1a2557;padding:0.9rem 1.2rem;margin:0.8rem 0;font-size:0.82rem;color:#1a2557;line-height:1.8;}
+    .warning-box{background:#fff8f0;border-left:4px solid #e07b00;padding:0.9rem 1.2rem;margin:0.8rem 0;font-size:0.82rem;color:#333;line-height:1.8;}
+    .success-box{background:#f0f8f0;border-left:4px solid #2d7a3a;padding:0.9rem 1.2rem;margin:0.8rem 0;font-size:0.82rem;color:#1a2557;line-height:1.8;}
+
+    /* SCHEDULE TABLE */
+    .schedule-table{width:100%;border-collapse:collapse;margin:0.8rem 0;font-size:0.79rem;}
+    .schedule-table th{background:#1a2557;color:white;padding:0.5rem 0.8rem;text-align:left;font-weight:600;font-size:0.72rem;letter-spacing:0.04em;}
+    .schedule-table td{padding:0.5rem 0.8rem;border-bottom:1px solid #e5e7eb;color:#333;vertical-align:top;line-height:1.5;}
+    .schedule-table tr:last-child td{border-bottom:none;}
+    .schedule-table tr.total-row td{font-weight:700;color:#1a2557;background:#f8f9fc;border-top:2px solid #1a2557;}
+    .schedule-table tr.note-row td{font-size:0.72rem;font-style:italic;color:#888;background:#fffbf0;}
+    .badge-tbd{display:inline-block;background:#888;color:white;font-size:0.65rem;font-weight:700;padding:0.1rem 0.5rem;border-radius:2px;letter-spacing:0.05em;}
+
+    /* PHOTOS */
+    .photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0;}
+    .photo-item{border:1px solid #e5e7eb;border-radius:3px;overflow:hidden;}
+    .photo-item img{width:100%;height:210px;object-fit:cover;display:block;}
+    .photo-caption{padding:0.5rem 0.7rem;font-size:0.72rem;color:#555;line-height:1.5;background:#f8f9fc;border-top:1px solid #e5e7eb;}
+    .map-full .photo-item img{height:320px;object-fit:contain;background:#f0f0f0;}
+
+    /* PROPERTY TABLE */
+    .prop-table{width:100%;border-collapse:collapse;margin:0.8rem 0;font-size:0.79rem;}
+    .prop-table td{padding:0.45rem 0.8rem;border-bottom:1px solid #e5e7eb;vertical-align:top;}
+    .prop-table td:first-child{font-weight:700;color:#1a2557;width:38%;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.04em;}
+    .prop-table tr:last-child td{border-bottom:none;}
+
+    /* SIGNATURE */
+    .sig-section{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid #e5e7eb;}
+    .sig-block label{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#999;display:block;margin-bottom:0.5rem;}
+    .sig-line{border-bottom:1px solid #333;height:2.5rem;margin-bottom:0.3rem;}
+    .sig-block p{font-size:0.75rem;color:#555;line-height:1.6;}
+
+    /* FOOTER */
+    .footer{border-top:3px solid #1a2557;padding:0.8rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;}
+    .footer-left{font-size:0.72rem;font-weight:700;color:#1a2557;letter-spacing:0.05em;}
+    .footer-right{font-size:0.65rem;color:#888;text-align:right;line-height:1.6;}
+
+    @media(max-width:600px){
+      .client-grid,.sig-section,.photo-grid{grid-template-columns:1fr;}
+      .client-cell:nth-child(even){border-right:none;border-left:none;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="print-bar no-print">
+  <button class="print-btn" onclick="window.print()">⬇ Save as PDF / Print</button>
+</div>
+
+<div class="doc">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-top">
+      <div>
+        <img src="data:image/jpeg;base64,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" alt="Pest Pro LLC" class="logo"/>
+        <p>3211 Vineland Road, Suite 107 · Kissimmee, FL 34746<br/>
+        Office: (407) 922-2276 · Daniel@PestProLLC.com<br/>
+        Licensed &amp; Insured · State of Florida · FDACS Lic. #JB304313</p>
+      </div>
+      <div class="doc-info">
+        <strong>RODENT ERADICATION PROGRAM PROPOSAL</strong>
+        Proposal No.: PP-2026-COTL-001<br/>
+        Date of Proposal: June 25, 2026<br/>
+        Prepared by: Daniel Rumsey, CPO<br/>
+        Valid for: 30 Days from Date of Issue
+      </div>
+    </div>
+    <div class="gold-bar"></div>
+  </div>
+
+  <!-- TITLE BAR -->
+  <div class="doc-title-bar">
+    <h1>RODENT ERADICATION PROGRAM — SERVICE PROPOSAL</h1>
+    <div class="sub">Covenant On The Lakes Apartment Homes · Managed by Hallmark Management</div>
+  </div>
+
+  <!-- CLIENT INFO -->
+  <div class="client-grid">
+    <div class="client-cell"><label>Property Name</label><p>Covenant On The Lakes Apartment Homes</p></div>
+    <div class="client-cell"><label>Service Address</label><p>2214 S Rio Grande Ave, Orlando, FL 32805</p></div>
+    <div class="client-cell"><label>Management Company</label><p>Hallmark Management</p></div>
+    <div class="client-cell"><label>Phone</label><p>(689) 219-8489</p></div>
+    <div class="client-cell"><label>Regional Manager</label><p>David</p></div>
+    <div class="client-cell"><label>Property Manager</label><p>Marilyn</p></div>
+  </div>
+
+  <div class="content">
+
+    <!-- EXECUTIVE SUMMARY -->
+    <div class="section">
+      <h3>Executive Summary</h3>
+      <p>Pest Pro, LLC conducted a comprehensive pest management inspection of Covenant On The Lakes, a 122-unit, three-story senior apartment community located at 2214 S Rio Grande Ave in Orlando, FL. The inspection revealed an active rodent infestation driven by multiple structural vulnerabilities throughout the building perimeter, including numerous unsealed utility penetrations, drill holes, a missing front entrance wire mesh cover, and potential unaddressed roof-level gaps resulting from 2024 hurricane damage repairs.</p>
+      <p>The property is currently under contract with a weekly service provider. Despite that frequency of visit, the infestation has not been controlled. This outcome is consistent with our findings on-site: without structural exclusion, trap and bait programs alone cannot resolve a sustained rodent population at a building with this many active entry points.</p>
+
+      <div class="warning-box">
+        <strong>Senior Community — Elevated Priority.</strong> Covenant On The Lakes is an active 55+ residential community. A persistent rodent infestation in this environment represents a direct health and safety concern for residents, as well as a regulatory and liability exposure for property management. This proposal is designed to resolve the infestation completely, not to manage it indefinitely.
+      </div>
+
+      <p>This proposal presents a two-phase program. Phase 1 deploys an expanded rodent monitoring and elimination network with weekly strategic service visits to rapidly suppress the active population. Phase 2 addresses root cause — permanently sealing all identified structural entry points along the full building perimeter. Our target is active control within <strong>six weeks</strong> and sustained optimal results within <strong>90 days</strong>.</p>
+    </div>
+
+    <!-- PROPERTY BACKGROUND -->
+    <div class="section">
+      <h3>Property Background</h3>
+      <table class="prop-table">
+        <tr><td>Year Built</td><td>2006</td></tr>
+        <tr><td>Roof Work</td><td>2024 — Repaired following hurricane damage. Penetrations and gaps resulting from roofing work may not have been addressed from a pest-exclusion standpoint.</td></tr>
+        <tr><td>Building Type</td><td>Three-story, core-shaped residential structure</td></tr>
+        <tr><td>Total Units</td><td>122 apartments</td></tr>
+        <tr><td>Occupancy Type</td><td>55+ Active Senior Community</td></tr>
+        <tr><td>Current Pest Service</td><td>Weekly service in place with current provider — active infestation unresolved to date</td></tr>
+      </table>
+    </div>
+
+    <!-- SITE MAP -->
+    <div class="section">
+      <h3>Site Overview — Primary Activity Zone</h3>
+      <p>The south-facing perimeter of the building carries the heaviest reported rodent activity. The annotated site plan below identifies this zone. All bait station placement and initial service efforts will be concentrated along this side of the structure, with full-perimeter coverage maintained throughout the program.</p>
+      <div class="map-full">
+        <div class="photo-item">
+          <img src="photos/covenant_lakes_map_annotated.jpg" alt="Covenant On The Lakes — Annotated Site Map"/>
+          <div class="photo-caption"><strong>Figure 1.</strong> Covenant On The Lakes site plan. Red arrows indicate the south-facing perimeter where the majority of rodent activity has been reported. Full-perimeter bait station coverage will be established, with concentrated placement along this zone.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INSPECTION FINDINGS -->
+    <div class="section">
+      <h3>Inspection Findings</h3>
+      <p>The following conditions were observed during our on-site inspection of the exterior perimeter and accessible common areas. Each represents a contributing factor to the active infestation and is addressed within the scope of work outlined in this proposal.</p>
+
+      <h3>Section A — Structural Penetration Points</h3>
+      <p>Multiple unsealed penetration points were identified where AC lines, electrical conduit, plumbing, and utility cables enter the structure through the brick facade and exterior siding. In most locations, no caulk, foam, wire mesh, or any rodent-exclusion material is present. Cracked and deteriorated mortar around these openings further compounds the vulnerability. This pattern was observed at intervals around the entire building perimeter.</p>
+
+      <div class="photo-grid">
+        <div class="photo-item">
+          <img src="photos/file_1479---400a0b9e-549e-4b9a-9651-91396de2e4af.jpg" alt="Multi-cable penetration through brick facade"/>
+          <div class="photo-caption"><strong>Photo 1.</strong> Multiple electrical and utility cables passing through an unsealed penetration in the brick facade. No caulk, foam, or wire mesh present.</div>
+        </div>
+        <div class="photo-item">
+          <img src="photos/file_1491---be2956c4-c640-410e-a0dc-e4b38739efdc.jpg" alt="AC line entering brick with open mortar gap"/>
+          <div class="photo-caption"><strong>Photo 2.</strong> Insulated AC line entering structure through brick with cracked and open mortar surrounding the penetration point. Gap provides direct access.</div>
+        </div>
+        <div class="photo-item">
+          <img src="photos/file_1483---d57ac7b7-b8ab-41f0-a71f-173c73c05ec6.jpg" alt="AC drain and conduit penetration through brick"/>
+          <div class="photo-caption"><strong>Photo 3.</strong> AC drain line and conduit entering through brick exterior — visible gap around penetration, no sealing material applied.</div>
+        </div>
+        <div class="photo-item">
+          <img src="photos/file_1484---54197645-f249-4704-9d2d-5245a263277c.jpg" alt="Large multi-line utility penetration through brick"/>
+          <div class="photo-caption"><strong>Photo 4.</strong> Large multi-line utility penetration — insulated refrigerant lines, conduit, and cabling entering through an oversized, unsealed opening in the brick facade.</div>
+        </div>
+      </div>
+
+      <h3>Section B — Ground-Level Entry Points</h3>
+      <p>In addition to utility penetrations, active rodent entry was identified at grade level. An opening consistent with gnawing and active ingress was observed at the base of an exterior siding panel. Unsealed drill holes were also found distributed throughout the brick perimeter — likely created during prior utility or cable installations and never backfilled. This pattern was observed surrounding the full structure.</p>
+
+      <div class="photo-grid">
+        <div class="photo-item">
+          <img src="photos/covenant_lakes_crop_siding_hole_v5.jpg" alt="Open breach at base of siding panel"/>
+          <div class="photo-caption"><strong>Photo 5.</strong> Open breach at the base of an exterior siding panel at grade level — damage pattern consistent with active rodent gnawing and entry.</div>
+        </div>
+        <div class="photo-item">
+          <img src="photos/covenant_lakes_crop_brick_burrow.jpg" alt="Rodent burrow at base of brick foundation"/>
+          <div class="photo-caption"><strong>Photo 6.</strong> Unsealed penetration at the base of the brick foundation — one of multiple such openings observed surrounding the building perimeter. Pattern indicates long-term, unaddressed access points.</div>
+        </div>
+      </div>
+
+      <h3>Section C — Front Entrance Opening</h3>
+      <p>A large structural opening was identified at the front entrance of the building where a wire mesh cover is absent. This gap is of sufficient size to permit rodent entry and is located at the primary resident access point, increasing exposure risk.</p>
+
+      <div class="photo-grid">
+        <div class="photo-item">
+          <img src="photos/file_1492---61881562-dae1-4b21-bd22-ca5900cfb679.jpg" alt="Front entrance missing wire mesh cover"/>
+          <div class="photo-caption"><strong>Photo 7.</strong> Front entrance of the building: large rectangular structural opening above the entrance arch with wire mesh cover absent. Direct rodent access to the building interior.</div>
+        </div>
+        <div class="photo-item">
+          <img src="photos/covenant_lakes_crop_cable_gap.jpg" alt="Cable penetration with exposed wire connectors"/>
+          <div class="photo-caption"><strong>Photo 8.</strong> Electrical cable bundle entering structure through open brick penetration — exposed wire connectors visible, no exclusion material of any kind present.</div>
+        </div>
+      </div>
+
+      <h3>Section D — Current Bait Station Deficiencies</h3>
+      <p>Five rodent bait stations were observed on the property at the time of inspection — an insufficient number for a building of this footprint and unit count. The stations observed were not positioned correctly (flush against the structure, as required for effective interception) and showed clear evidence of inadequate servicing. The condition of station interiors — degraded bait, accumulation of debris and leaf matter — indicates a program that has not been consistently maintained.</p>
+
+      <div class="photo-grid">
+        <div class="photo-item">
+          <img src="photos/file_1489-bait-station-interior.jpg" alt="Interior of existing bait station — degraded and unserviced"/>
+          <div class="photo-caption"><strong>Photo 9.</strong> Interior of one of the existing bait stations. Blue rodenticide is severely degraded, and debris and leaf matter have accumulated inside — consistent with extended periods without service.</div>
+        </div>
+        <div class="photo-item">
+          <img src="photos/file_1490---faae3081-83b9-48d8-a1d9-b22d514bd2fe.jpg" alt="Improperly placed bait station"/>
+          <div class="photo-caption"><strong>Photo 10.</strong> Existing bait station placement — station is not positioned flush against the structure as required. Improper placement significantly reduces interception effectiveness. Note also the large foundation gap with conduit visible in background.</div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <strong>Additional Contributing Factors:</strong>
+        <ul style="margin-top:0.4rem;margin-bottom:0;">
+          <li><strong>Roof-Level Penetrations:</strong> The 2024 hurricane damage repairs likely left roof-level penetration points that were never addressed from a pest-exclusion standpoint. A three-story structure with accessible roofline gaps is particularly vulnerable to rodent ingress from above.</li>
+          <li><strong>Vegetation Contact:</strong> Trees and foliage are making direct contact with the building exterior in multiple locations, creating natural harborage and bridges that allow rodents to bypass ground-level defenses entirely.</li>
+          <li><strong>Fire Ant Activity:</strong> Heavy fire ant activity was observed along the exterior perimeter. Active colonies were present throughout the property grounds.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SCOPE OF WORK -->
+    <div class="section">
+      <h3>Scope of Services</h3>
+      <p>This proposal authorizes Pest Pro, LLC to provide a comprehensive Rodent Eradication Program at the above-referenced property. The program is designed to systematically eliminate the active rodent population, expand and properly position the monitoring network, permanently seal all identified structural entry points, and establish an ongoing maintenance program to prevent recurrence. All services are specific to rodents (rats and mice) unless otherwise noted in writing.</p>
+    </div>
+
+    <div class="section">
+      <h3>Phase 1 — Active Rodent Elimination &amp; Expanded Monitoring</h3>
+      <p><strong>Bait Station Installation:</strong> Installation of 20 tamper-resistant, weighted, state-compliant rodent bait stations positioned strategically around the full building perimeter. Stations will be placed flush against the structure at regular intervals, with concentrated placement along the south side where activity is heaviest. Where existing property-owned stations are operational, properly weighted, and state-compliant, they may be incorporated into the program at no additional charge.</p>
+      <p><strong>Service Frequency — Active Phase:</strong> Weekly strategic service visits for the duration of the active elimination period. Each visit includes full station inspection, bait replenishment, activity documentation, and station repositioning as conditions dictate.</p>
+      <p><strong>Fire Ant Perimeter Treatment:</strong> Full perimeter treatment targeting active fire ant colonies using EPA-registered products with residual protection. Included as part of the initial service at no additional charge.</p>
+      <p><strong>Documentation:</strong> A written service report will be provided to property management at the conclusion of each visit, documenting observations, captures recorded, station status, and recommended adjustments.</p>
+
+      <div class="success-box">
+        <strong>Timeline Targets:</strong> Active rodent control achieved within <strong>6 weeks</strong> of program start, contingent upon timely completion of all client-side responsibilities. Full sustained optimal results confirmed at the <strong>90-day</strong> mark. Following the active elimination phase, service transitions to a monthly maintenance schedule.
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Phase 2 — Structural Exclusion</h3>
+      <p>Exclusion work will begin during the active phase and be completed no later than the end of Week 6. Pest Pro, LLC will be responsible for all functional exclusion — identification, material application, and sealing. Final cosmetic finishes (painting, surface matching) are the responsibility of property maintenance staff.</p>
+      <p><strong>Exterior Exclusion:</strong> Complete inspection and sealing of all identified exterior entry points, including all utility penetrations through brick and siding, drill holes in the perimeter, the front entrance wire mesh opening, and any accessible roof-level gaps related to the 2024 repairs. Materials used include galvanized hardware cloth, rodent-proof expanding foam sealant, and mortar as appropriate to gap size and location.</p>
+      <p><strong>Interior Exclusion:</strong> Identification and sealing of interior penetration points using appropriate rodent-proofing materials, stucco, and rodent-proof foam sealant.</p>
+
+      <div class="highlight-box">
+        <strong>Client Responsibilities — Vegetation:</strong> Trimming of trees and foliage currently making contact with the building structure is required to eliminate rodent access bridges. This work falls outside the scope of this proposal and should be coordinated promptly by property management. The effectiveness of the exclusion program is directly linked to this step being completed.
+      </div>
+    </div>
+
+    <!-- SCHEDULE & PRICING -->
+    <div class="section">
+      <h3>Program Schedule and Pricing</h3>
+      <p>The program is structured as shown below. All service visits and exclusion work are invoiced upon completion of each phase. All amounts are subject to applicable Florida sales tax.</p>
+
+      <table class="schedule-table">
+        <thead>
+          <tr><th>Phase</th><th>Period</th><th>Activity</th><th>Service</th><th>Materials</th><th>Total</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Phase 1</strong><br/><span class="badge-tbd">PENDING</span></td>
+            <td>Weeks 1–6<br/>(Weekly)</td>
+            <td>Active elimination — 20 stations installed, weekly visits, fire ant treatment included</td>
+            <td>$__________</td>
+            <td>$__________</td>
+            <td><strong>$__________</strong></td>
+          </tr>
+          <tr class="note-row">
+            <td colspan="6">Materials include: tamper-resistant bait stations (qty 20), commercial-grade rodenticide, fire ant treatment. Existing stations may be utilized where state-compliant.</td>
+          </tr>
+          <tr>
+            <td><strong>Phase 2</strong><br/><span class="badge-tbd">PENDING</span></td>
+            <td>Weeks 3–6<br/>(One-Time)</td>
+            <td>Full structural exclusion — exterior and interior penetration sealing, front entrance mesh, roof-level gaps</td>
+            <td colspan="2">$__________</td>
+            <td><strong>$__________</strong></td>
+          </tr>
+          <tr class="note-row">
+            <td colspan="6">Materials include: galvanized hardware cloth, rodent-proof expanding foam, mortar. Final cosmetic finishes (paint) by property maintenance staff.</td>
+          </tr>
+          <tr>
+            <td><strong>Ongoing<br/>Maintenance</strong></td>
+            <td>Monthly<br/>(Post-Week 6)</td>
+            <td>Monthly station inspection, bait replenishment, documentation — all 20 stations</td>
+            <td colspan="2">$__________ / month</td>
+            <td><strong>$__________ / mo.</strong></td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="5"><strong>Total Program Investment (Phase 1 + Phase 2)</strong></td>
+            <td><strong>$__________</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.73rem;color:#888;font-style:italic;">All invoices are subject to applicable Florida sales tax. Proposal valid for 30 days from date of issue. Pricing based on field conditions observed at time of inspection; adjustments may apply if additional entry points are identified during Phase 2 exclusion work.</p>
+    </div>
+
+    <!-- CLIENT RESPONSIBILITIES -->
+    <div class="section">
+      <h3>Client and Maintenance Staff Responsibilities</h3>
+      <p>The effectiveness of this program and the ability to meet the projected timeline are directly dependent upon the cooperation and prompt action of property management and maintenance staff. The following responsibilities must be fulfilled throughout the duration of this program.</p>
+      <ul>
+        <li>Ensure all trees, overhanging limbs, shrubs, and plants making contact with the building structure are trimmed back and maintained away from the exterior.</li>
+        <li>Remove and maintain all excess leaves and debris from areas surrounding the building, including along the foundation perimeter.</li>
+        <li>Ensure all dumpster and trash staging areas are kept clear of discarded food and organic debris.</li>
+        <li>Maintain proper sanitation in all common areas, hallways, and mechanical spaces.</li>
+        <li>All doors and points of entry should be kept closed and properly sealed to prevent additional rodent ingress during the active phase.</li>
+        <li>Report any observed pest activity to the assigned Pest Pro contact without delay.</li>
+        <li>Complete all cosmetic/finish work (painting, surface matching) in connection with Phase 2 exclusion repairs.</li>
+        <li>Cooperate with any access requests to common areas, mechanical rooms, and roofline spaces required to complete Phase 2 work.</li>
+      </ul>
+    </div>
+
+    <!-- PEST PRO COMMITMENTS -->
+    <div class="section">
+      <h3>Pest Pro Service Commitments</h3>
+      <ul>
+        <li>Any reported pest activity will be responded to within 24 hours of notice throughout the active phase.</li>
+        <li>All calls and messages will be returned within 4 hours during business hours.</li>
+        <li>A written service report will be provided at the conclusion of each visit, documenting all observations, station status, activity recorded, and next steps.</li>
+        <li>Direct access to the program owner, Daniel Rumsey, CPO, throughout the duration of the program.</li>
+      </ul>
+    </div>
+
+    <!-- WHY PEST PRO -->
+    <div class="section">
+      <h3>About Pest Pro, LLC</h3>
+      <p>Pest Pro has been protecting Florida properties since 1988. We are licensed by the Florida Department of Agriculture and Consumer Services (License #JB304313) and carry $3,000,000 in general aggregate commercial liability coverage through Markel Insurance.</p>
+      <p>We do not operate on cookie-cutter programs. Every service plan is built around the specific property, its occupants, and the conditions we find on-site. For a senior residential community, that means product selection and application methods appropriate for a sensitive population — and a program designed around complete resolution, not indefinite management.</p>
+      <p>The current program at this property has had weekly access and has not resolved the issue. The root cause is structural. We address root causes.</p>
+    </div>
+
+    <!-- SIGNATURE -->
+    <div class="section">
+      <h3>Authorization and Acceptance</h3>
+      <p>By signing below, the authorized representative of Covenant On The Lakes / Hallmark Management authorizes Pest Pro, LLC to proceed with the Rodent Eradication Program as outlined in this proposal at the pricing agreed upon. This proposal, once signed, serves as the service agreement for the program.</p>
+
+      <div class="sig-section">
+        <div class="sig-block">
+          <label>Authorized Representative — Property / Management</label>
+          <div class="sig-line"></div>
+          <p>Printed Name: _________________________________<br/>
+          Title: _________________________________<br/>
+          Date: _______________</p>
+        </div>
+        <div class="sig-block">
+          <label>Pest Pro, LLC — Authorized Representative</label>
+          <div class="sig-line"></div>
+          <p>Daniel Rumsey, CPO<br/>
+          Owner / CEO — Pest Pro, LLC<br/>
+          Date: _______________</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end .content -->
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-left">PEST PRO, LLC · (407) 922-2276 · Daniel@PestProLLC.com · www.PestProLLC.com</div>
+    <div class="footer-right">3211 Vineland Road, Suite 107 · Kissimmee, FL 34746<br/>FDACS License #JB304313 · Insured $3M General Aggregate</div>
+  </div>
+
+</div><!-- end .doc -->
+
+</body>
+</html>

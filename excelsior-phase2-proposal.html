@@ -8,15 +8,29 @@
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Inter',sans-serif;background:#f0f0f0;padding:1.5rem;}
-    @media print{
-      body{background:white;padding:0;margin:0;}
+        @media print{
+      @page{margin:0.55in 0.5in;}
+      body{background:white;padding:0;margin:0;font-size:10pt;}
       .no-print{display:none!important;}
-      .doc{box-shadow:none!important;}
-      h3{page-break-after:avoid;}
-      p,li{page-break-inside:avoid;orphans:3;widows:3;}
+      .doc{box-shadow:none!important;max-width:100%;}
+      .header{padding:1rem 1.8rem 0.8rem;}
+      .content{padding:1rem 1.8rem 1.5rem;}
+      .client-cell{padding:0.6rem 1.8rem;}
+      h3{page-break-after:avoid;page-break-before:auto;margin-top:1.2rem;}
+      h3:first-child{margin-top:0;}
+      p{page-break-inside:avoid;orphans:3;widows:3;}
+      li{page-break-inside:avoid;orphans:2;widows:2;}
       .section{page-break-inside:avoid;}
-      table{page-break-inside:avoid;}
-      .sig-section,.client-grid,.callout,.note-box,.two-col,.footer{page-break-inside:avoid;}
+      tr{page-break-inside:avoid;}
+      thead{display:table-header-group;}
+      .scope-table,.compare-table,.portfolio-table,.rollout-table{page-break-inside:auto;font-size:9pt;}
+      .scope-table tr,.compare-table tr,.portfolio-table tr,.rollout-table tr{page-break-inside:avoid;}
+      .sig-section{page-break-inside:avoid;page-break-before:auto;}
+      .client-grid{page-break-inside:avoid;page-break-after:avoid;}
+      .callout,.note-box{page-break-inside:avoid;}
+      .two-col{page-break-inside:avoid;}
+      .footer{page-break-inside:avoid;page-break-before:avoid;}
+      .doc-title-bar{page-break-after:avoid;}
     }
     .print-bar{max-width:820px;margin:0 auto 1rem;text-align:right;}
     .print-btn{background:#1a2557;color:white;border:none;padding:0.65rem 1.6rem;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:3px;}

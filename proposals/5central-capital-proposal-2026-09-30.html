@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pest Management Proposal | 5Central Capital | Pest Pro LLC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;background:#f0f0f0;padding:1.5rem;}
+    @media print{
+      @page{
+        margin:0.5in;
+        @bottom-right{content:"Page " counter(page) " of " counter(pages);font-size:7.5pt;color:#888;font-family:'Inter',sans-serif;}
+      }
+      *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;}
+      body{background:white;padding:0;margin:0;font-size:9.5pt;}
+      .no-print{display:none!important;}
+      .doc{box-shadow:none!important;max-width:100%;width:100%;}
+      .logo{height:56px;}
+      .header{padding:0.55rem 1.4rem 0.45rem;}
+      .company-block p,.doc-info{font-size:7pt;line-height:1.5;}
+      .doc-info strong{font-size:8pt;}
+      .doc-title-bar{padding:0.6rem 1.4rem;}
+      .client-cell{padding:0.4rem 1.4rem;}
+      .client-cell label{font-size:6pt;}
+      .client-cell p{font-size:7.5pt;}
+      .content{padding:0.6rem 1.4rem 0.8rem;}
+      h3{page-break-after:avoid;margin-top:0.85rem;font-size:7pt;padding-bottom:0.3rem;}
+      h3:first-child{margin-top:0;}
+      p{orphans:3;widows:3;margin-bottom:0.4rem;font-size:7.5pt;line-height:1.65;}
+      li{orphans:2;widows:2;font-size:7.5pt;line-height:1.65;}
+      ul{margin-bottom:0.5rem;}
+      .section{page-break-inside:avoid;margin-bottom:0.55rem;}
+      tr{page-break-inside:avoid;}
+      thead{display:table-header-group;}
+      .scope-table,.compare-table,.portfolio-table{page-break-inside:auto;font-size:7.5pt;width:100%;}
+      .scope-table tr,.compare-table tr,.portfolio-table tr{page-break-inside:avoid;}
+      .scope-table th,.compare-table th,.portfolio-table th{padding:0.28rem 0.55rem;font-size:7pt;}
+      .scope-table td,.compare-table td,.portfolio-table td{padding:0.28rem 0.55rem;}
+      .callout,.note-box{page-break-inside:avoid;margin:0.35rem 0;padding:0.5rem 0.8rem;font-size:7.5pt;}
+      .two-col{page-break-inside:avoid;}
+      .covered-box li,.notcovered-box li{font-size:7pt;}
+      .covered-box h4,.notcovered-box h4{font-size:6.5pt;}
+      .sig-section{page-break-inside:avoid;margin-top:0.7rem;padding-top:0.7rem;}
+      .sig-block p{font-size:7pt;}
+      .sig-name{font-size:1.3rem;}
+      .footer{page-break-inside:avoid;padding:0.45rem 1.4rem;}
+      .footer-left{font-size:6.5pt;}
+      .footer-right{font-size:6pt;}
+      .gold-bar{height:1.5px;}
+      .badge{font-size:5.5pt;padding:0.1rem 0.35rem;}
+      .inc{font-size:7pt;}
+    }
+    .print-bar{max-width:820px;margin:0 auto 1rem;text-align:right;}
+    .print-btn{background:#1a2557;color:white;border:none;padding:0.65rem 1.6rem;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:3px;}
+    .doc{background:white;max-width:820px;margin:0 auto;box-shadow:0 4px 20px rgba(0,0,0,0.12);}
+    .header{padding:1.8rem 2.5rem 1.2rem;border-bottom:3px solid #1a2557;}
+    .header-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:1rem;}
+    .logo{height:60px;width:auto;display:block;}
+    .company-block p{font-size:0.75rem;color:#555;line-height:1.7;margin-top:0.3rem;}
+    .doc-info{text-align:right;font-size:0.75rem;color:#555;line-height:1.8;}
+    .doc-info strong{color:#1a2557;display:block;font-size:0.88rem;font-weight:800;}
+    .gold-bar{height:3px;background:linear-gradient(90deg,#FFB800,#e0a200,#FFB800);}
+    .doc-title-bar{background:#1a2557;color:white;padding:1rem 2.5rem;}
+    .doc-title-bar h1{font-size:1rem;font-weight:700;letter-spacing:0.04em;}
+    .doc-title-bar .sub{font-size:0.75rem;opacity:0.75;margin-top:0.2rem;}
+    .client-grid{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #e5e7eb;}
+    .client-cell{padding:0.8rem 2.5rem;border-right:1px solid #e5e7eb;}
+    .client-cell:nth-child(even){border-right:none;}
+    .client-cell:nth-child(n+3){border-top:1px solid #e5e7eb;}
+    .client-cell label{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#999;display:block;margin-bottom:0.2rem;}
+    .client-cell p{font-size:0.82rem;color:#1a2557;font-weight:600;line-height:1.5;}
+    .content{padding:1.8rem 2.5rem 2rem;}
+    h3{font-size:0.8rem;font-weight:800;color:#1a2557;text-transform:uppercase;letter-spacing:0.08em;margin:1.8rem 0 0.6rem;padding-bottom:0.4rem;border-bottom:2px solid #FFB800;}
+    h3:first-child{margin-top:0;}
+    p{font-size:0.82rem;color:#333;line-height:1.8;margin-bottom:0.7rem;}
+    ul{padding-left:1.3rem;margin-bottom:0.8rem;}
+    li{font-size:0.82rem;color:#333;line-height:1.8;margin-bottom:0.2rem;}
+    strong{color:#1a2557;}
+    .callout{background:#f0f3fa;border-left:4px solid #1a2557;padding:0.9rem 1.2rem;margin:0.8rem 0;font-size:0.82rem;color:#1a2557;line-height:1.8;}
+    .note-box{background:#fffbf0;border-left:4px solid #FFB800;padding:0.9rem 1.2rem;margin:0.8rem 0;font-size:0.82rem;color:#333;line-height:1.8;}
+    .scope-table{width:100%;border-collapse:collapse;margin:0.8rem 0;font-size:0.79rem;}
+    .scope-table th{background:#1a2557;color:white;padding:0.5rem 0.8rem;text-align:left;font-weight:600;font-size:0.72rem;letter-spacing:0.04em;}
+    .scope-table td{padding:0.5rem 0.8rem;border-bottom:1px solid #e5e7eb;color:#333;vertical-align:top;line-height:1.6;}
+    .scope-table tr:last-child td{border-bottom:none;}
+    .scope-table tr:nth-child(even) td{background:#f8f9fc;}
+    .compare-table{width:100%;border-collapse:collapse;margin:0.8rem 0;font-size:0.79rem;}
+    .compare-table th{background:#1a2557;color:white;padding:0.55rem 0.9rem;text-align:left;font-weight:700;font-size:0.72rem;letter-spacing:0.04em;}
+    .compare-table td{padding:0.5rem 0.9rem;border-bottom:1px solid #e5e7eb;color:#333;vertical-align:top;line-height:1.6;}
+    .compare-table tr:nth-child(even) td{background:#f8f9fc;}
+    .compare-table .inc{color:#2d7a3a;font-weight:700;}
+    .portfolio-table{width:100%;border-collapse:collapse;margin:0.8rem 0;font-size:0.82rem;}
+    .portfolio-table th{background:#1a2557;color:white;padding:0.6rem 1rem;text-align:left;font-weight:700;font-size:0.72rem;letter-spacing:0.04em;}
+    .portfolio-table td{padding:0.55rem 1rem;border-bottom:1px solid #e5e7eb;color:#333;vertical-align:middle;line-height:1.5;}
+    .portfolio-table tr:nth-child(even) td{background:#f8f9fc;}
+    .portfolio-table .subtotal td{background:#f0f3fa;font-weight:700;color:#1a2557;border-top:2px solid #1a2557;}
+    .portfolio-table .grand-total td{background:#1a2557;color:white;font-weight:700;font-size:0.85rem;}
+    .portfolio-table .grand-total td strong{color:#FFB800;}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:0.5rem 0;}
+    .covered-box{background:#f0f8f0;border:1px solid #c8e6c9;border-radius:3px;padding:0.9rem 1.1rem;}
+    .covered-box h4{font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:#2d7a3a;margin-bottom:0.5rem;}
+    .notcovered-box{background:#fff5f5;border:1px solid #fca5a5;border-radius:3px;padding:0.9rem 1.1rem;}
+    .notcovered-box h4{font-size:0.72rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:#cc2200;margin-bottom:0.5rem;}
+    .covered-box li,.notcovered-box li{font-size:0.8rem;color:#333;line-height:1.7;}
+    .sig-section{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid #e5e7eb;}
+    .sig-block label{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#999;display:block;margin-bottom:0.5rem;}
+    .sig-line{border-bottom:1px solid #333;height:2.5rem;margin-bottom:0.4rem;position:relative;}
+    .sig-name{font-family:'Dancing Script',cursive;font-size:1.5rem;color:#1a2557;position:absolute;bottom:4px;left:0;line-height:1;}
+    .sig-block p{font-size:0.75rem;color:#555;line-height:1.7;}
+    .footer{border-top:3px solid #1a2557;padding:0.8rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;}
+    .footer-left{font-size:0.72rem;font-weight:700;color:#1a2557;letter-spacing:0.05em;}
+    .footer-right{font-size:0.65rem;color:#888;text-align:right;line-height:1.6;}
+    @media(max-width:600px){
+      .client-grid,.sig-section,.two-col{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="print-bar no-print">
+  <button class="print-btn" onclick="window.print()">&#8595; Save as PDF / Print</button>
+</div>
+
+<div class="doc">
+
+  <div class="header">
+    <div class="header-top">
+      <div>
+        <img src="../projects/pestpro-docs/pestpro-logo.jpg" alt="Pest Pro LLC" class="logo"/>
+        <div class="company-block">
+          <p>3211 Vineland Road, Suite 107 &middot; Kissimmee, FL 34746<br/>
+          Office: (407) 922-2276 &middot; info@PestProLLC.com<br/>
+          Licensed &amp; Insured &middot; State of Florida &middot; FDACS License: JB304313</p>
+        </div>
+      </div>
+      <div class="doc-info">
+        <strong>PEST MANAGEMENT PROPOSAL</strong>
+        Multifamily Portfolio Service<br/>
+        Proposal No.: PP-2026-5CC-001<br/>
+        Prepared: September 30, 2026<br/>
+        Valid: 30 Days
+      </div>
+    </div>
+    <div class="gold-bar"></div>
+  </div>
+
+  <div class="doc-title-bar">
+    <h1>EXTERIOR PEST MANAGEMENT PROPOSAL</h1>
+    <div class="sub">5Central Capital &middot; Hickory Landing + Lucia Apartments &middot; Prepared by Pest Pro, LLC</div>
+  </div>
+
+  <div class="client-grid">
+    <div class="client-cell"><label>Investment Group</label><p>5Central Capital</p></div>
+    <div class="client-cell"><label>Principal</label><p>Michael McElwee</p></div>
+    <div class="client-cell"><label>Properties</label><p>Hickory Landing, Lakeland<br/>Lucia Apartments, Winter Haven</p></div>
+    <div class="client-cell"><label>Total Residential Units</label><p>24 Units Across Both Properties</p></div>
+    <div class="client-cell"><label>Proposal Prepared By</label><p>Daniel J. Rumsey, CPO<br/>Owner / CEO &middot; Pest Pro, LLC</p></div>
+    <div class="client-cell"><label>Proposal No.</label><p>PP-2026-5CC-001 &middot; September 30, 2026</p></div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <h3>Overview</h3>
+      <p>Pest Pro, LLC is pleased to submit this proposal to 5Central Capital for monthly exterior pest management service at Hickory Landing in Lakeland and Lucia Apartments in Winter Haven. This proposal reflects combined portfolio pricing and presents both properties as a single service account.</p>
+      <p>Our program is built on Integrated Pest Management principles, with each property receiving a service approach tailored to its specific structures, layout, and pest pressures. We do not apply a one-size-fits-all contract. Hickory Landing spans four separate duplex structures across three parcels. Lucia Apartments encompasses multiple residential buildings, including the main multi-unit structure and several duplex configurations. Each building perimeter, foundation, entry point, and harborage area within the improved parcels is worked on every service visit.</p>
+      <div class="callout">
+        Pest Pro focuses on exterior preventative maintenance to establish and maintain a pest-free perimeter around each residential structure. Effective results depend on routine access to all building exteriors and reasonably maintained common areas. Pest Pro will communicate any conditions that may limit treatment effectiveness directly to the designated property contact.
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Properties and Monthly Investment</h3>
+      <p>The rates below reflect combined portfolio pricing for both properties under a single service account.</p>
+      <table class="portfolio-table">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Address</th>
+            <th>Units</th>
+            <th>Monthly Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Hickory Landing</strong></td>
+            <td>2006/2008 W Hickory St and 601/603, 613/615/617/619 Plateau Ave<br/>Lakeland, FL 33815</td>
+            <td>8</td>
+            <td><strong>$120.00</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Lucia Apartments</strong></td>
+            <td>669, 670/672 Avenue B NW; 658/658.5 Avenue B NW;<br/>124/124.5 7th St NW, Winter Haven, FL 33881</td>
+            <td>16</td>
+            <td><strong>$160.00</strong></td>
+          </tr>
+          <tr class="grand-total">
+            <td colspan="3"><strong>Combined Monthly Investment &middot; Both Properties</strong></td>
+            <td><strong>$280.00</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.75rem;color:#888;font-style:italic;">No setup fee. No initial service fee. Service begins with the first scheduled visit. There is no contract or term obligation. A 30-day written notice is all that is required to discontinue service at either property.</p>
+    </div>
+
+    <div class="section">
+      <h3>Service Scope</h3>
+      <p>Each monthly visit includes a full exterior perimeter treatment of all residential building foundations, entry points, utility penetrations, eaves, soffits, window frames, door frames, and accessible exterior harborage areas within the improved parcels described in this proposal.</p>
+      <p>Service is performed in accordance with Integrated Pest Management principles using EPA-registered products selected for residential environments. All applications are targeted and applied to exterior surfaces only under the standard monthly program. Products are chosen to provide lasting residual protection while minimizing unnecessary chemical exposure.</p>
+    </div>
+
+    <div class="section">
+      <h3>What the Monthly Rate Covers</h3>
+      <table class="compare-table">
+        <thead>
+          <tr><th>Service</th><th>Typical Providers</th><th>Pest Pro</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monthly exterior perimeter treatment of all building structures</td>
+            <td>Quarterly standard; monthly billed separately</td>
+            <td class="inc">Included monthly at every scheduled visit</td>
+          </tr>
+          <tr>
+            <td>Custom-tailored IPM program per property</td>
+            <td>Standard contract applied uniformly</td>
+            <td class="inc">Included; each property receives a program built for its specific conditions and structures</td>
+          </tr>
+          <tr>
+            <td>Callbacks for covered pest activity between scheduled visits</td>
+            <td>Billed per visit</td>
+            <td class="inc">Included at no additional charge</td>
+          </tr>
+          <tr>
+            <td>Setup or initial service fee</td>
+            <td>Common; typically $50 to $150</td>
+            <td class="inc">None. No setup fee of any kind</td>
+          </tr>
+          <tr>
+            <td>Service documentation</td>
+            <td>Available upon request; may carry a fee</td>
+            <td class="inc">Provided upon request at no additional charge</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h3>Pest Coverage</h3>
+      <div class="two-col">
+        <div class="covered-box">
+          <h4>&#10003; Covered Under Monthly Rate</h4>
+          <ul>
+            <li>Ants (general species)</li>
+            <li>Cockroaches and palmetto bugs</li>
+            <li>Spiders</li>
+            <li>Crickets</li>
+            <li>Beetles</li>
+            <li>Other common household crawling insects</li>
+          </ul>
+        </div>
+        <div class="notcovered-box">
+          <h4>&#10007; Not Covered &middot; Available Separately</h4>
+          <ul>
+            <li>Biting and stinging insects</li>
+            <li>Rodents and wildlife</li>
+            <li><strong>German roach infestation cleanout</strong> &middot; starting at $80.00/unit</li>
+            <li><strong>Bed bug treatment</strong> &middot; starting at $200.00/unit</li>
+          </ul>
+        </div>
+      </div>
+      <p style="font-size:0.75rem;color:#888;font-style:italic;margin-top:0.5rem;">Biting and stinging insects, rodents, and wildlife services are available at preferred rates for active Pest Pro service accounts.</p>
+    </div>
+
+    <div class="section">
+      <h3>Optional Services</h3>
+      <p>The following services are available in addition to the standard monthly exterior program and may be added at any time.</p>
+
+      <table class="scope-table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Rate</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Interior Treatment (On Request)</strong></td>
+            <td>$40.00 per unit, per visit</td>
+            <td>For active covered pest activity inside a unit. Requires 24-hour advance notice. Must be scheduled for the property's designated service day.</td>
+          </tr>
+          <tr>
+            <td><strong>Monthly Interior Preventative Add-On</strong></td>
+            <td>$8.00 per unit, per month</td>
+            <td>Optional monthly interior GHP preventative treatment, available only at the time of the scheduled exterior service visit. Units that are inaccessible or refuse entry on the scheduled service day remain subject to the monthly interior charge.</td>
+          </tr>
+          <tr>
+            <td><strong>Rodent Bait Stations (RBS)</strong></td>
+            <td>$22.00 per station (installation)<br/>$5.00 per station, per month (maintenance)</td>
+            <td>State-approved tamper-resistant exterior rodent bait stations. Installed at locations determined during on-site assessment. Maintained monthly. Can be added to either or both properties at any time.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h3>Specialty Services</h3>
+      <p>The following services address active infestation conditions and are separate from the standard monthly preventative maintenance program. Each is quoted and scheduled individually as needed.</p>
+      <div class="note-box">
+        <p style="margin-bottom:0.5rem;"><strong>German Roach Infestation Cleanout:</strong> Starting at $80.00 per unit. German roach infestations, particularly in units undergoing renovation or turnover, require targeted interior cleanout treatment that differs substantially from routine exterior preventative service. This service is billed per unit, per occurrence.</p>
+        <p style="margin-bottom:0;"><strong>Bed Bug Infestation Treatment:</strong> Starting at $200.00 per unit. Bed bug treatments are assessed and quoted on a per-unit basis prior to service. Rate varies based on severity and conditions.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Our Commitments</h3>
+      <ul>
+        <li>Pest Pro will not cancel or defer any scheduled service visit without advance notice to the designated property contact. If a visit cannot be completed as scheduled, it will be rescheduled within the same service cycle</li>
+        <li>Callbacks for covered pest activity are responded to at no additional charge</li>
+        <li>All calls and messages are returned within four hours during normal service hours</li>
+        <li>A certified pest control operator is reachable by phone during normal service hours for any concern that cannot be resolved at the technician level</li>
+        <li>Any conditions identified during service that may affect pest control effectiveness will be documented and communicated to the designated property contact</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Property Responsibilities</h3>
+      <ul>
+        <li>Maintain reasonably clean common areas, dumpster areas, and perimeter grounds to support treatment effectiveness</li>
+        <li>Provide access to all building exteriors and common areas on scheduled service days</li>
+        <li>Report pest activity promptly to the designated Pest Pro contact</li>
+        <li>Notify tenants of scheduled pest control service as required under applicable lease terms and local requirements. Pest Pro will provide advance notice of scheduled service to the designated property contact. The responsibility for communicating service schedules to individual tenants rests with property management</li>
+        <li>When interior service is requested, coordinate 24-hour advance notice with tenants for the applicable units</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Terms</h3>
+      <ul>
+        <li>This proposal is valid for 30 days from September 30, 2026</li>
+        <li>No contract. No obligation. A 30-day written notice is all that is required to discontinue service at either property</li>
+        <li>Service begins on a mutually agreed date following acceptance</li>
+        <li>Either property may be discontinued independently without effect on the remaining property</li>
+        <li>Invoices are issued monthly and are due within 30 days of the invoice date (Net 30)</li>
+        <li>Normal service hours are Monday through Saturday, 8:00 AM to 6:00 PM</li>
+        <li>Interior treatment, specialty services, and rodent bait station installation are not included in the monthly rate and are billed separately as rendered</li>
+        <li>Optional monthly interior add-on charges apply regardless of unit access or tenant refusal on the scheduled service day</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>About Pest Pro</h3>
+      <p>Pest Pro, LLC is a family owned and operated pest control company serving Florida since 1988. We specialize in Customized Pest Management Systems designed around each property's unique environment, layout, and pest pressures. Our service area covers Orange, Osceola, Lake, Polk, and surrounding counties, and we maintain active accounts at multifamily, commercial, and residential properties throughout Central Florida.</p>
+      <p>Our approach is grounded in Integrated Pest Management principles, with targeted applications that deliver lasting results while minimizing unnecessary chemical exposure for tenants and common areas. We build long-term relationships with property operators and adapt our programs as properties evolve.</p>
+      <p><strong>Fully Licensed and Insured:</strong><br/>
+      FDACS License No. JB304313 (GHP) &middot; State of Florida<br/>
+      General Liability: $1,000,000 per occurrence &middot; $3,000,000 aggregate<br/>
+      Certificate of Insurance available upon request.</p>
+    </div>
+
+    <div class="sig-section">
+      <div class="sig-block">
+        <label>Submitted By</label>
+        <div class="sig-line">
+          <span class="sig-name">Daniel Rumsey</span>
+        </div>
+        <p><strong>Daniel J. Rumsey, CPO</strong><br/>
+        Owner / CEO &middot; Pest Pro, LLC<br/>
+        (954) 410-6389 &middot; info@PestProLLC.com<br/>
+        FDACS License: JB304313<br/>
+        Date: September 30, 2026</p>
+      </div>
+      <div class="sig-block">
+        <label>Accepted By &middot; 5Central Capital</label>
+        <div class="sig-line"></div>
+        <p>Printed Name: ___________________________<br/>
+        Title: ___________________________________<br/>
+        Date: ___________________________________</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">PEST PRO, LLC &middot; (407) 922-2276 &middot; info@PestProLLC.com</div>
+    <div class="footer-right">3211 Vineland Road, Suite 107 &middot; Kissimmee, FL 34746<br/>Proposal No. PP-2026-5CC-001 &middot; September 30, 2026 &middot; Confidential</div>
+  </div>
+
+</div>
+</body>
+</html>
